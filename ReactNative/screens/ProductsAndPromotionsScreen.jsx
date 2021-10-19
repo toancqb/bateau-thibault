@@ -1,9 +1,10 @@
 import { Text, View, FlatList, StyleSheet } from "react-native"
 import React from 'react'
+import { Background } from "../components/templates"
 
 export default function ProductsAndPromotions() {
     return (
-        <View>
+        <Background>
             <Text>Choissisez vos produits</Text>
             <View style={styles.container}>
                 <FlatList
@@ -19,10 +20,11 @@ export default function ProductsAndPromotions() {
                         { key: 'Jimmy' },
                         { key: 'Julie' },
                     ]}
-                    renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
+                    renderItem={({ item }) => <View style={styles.listItem}><Text style={styles.item}>{item.key}</Text></View>}
                 />
             </View>
-        </View>
+        </Background>
+
     )
 }
 
@@ -30,13 +32,16 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 22
-       },
-       item: {
-         padding: 10,
-         fontSize: 18,
-         height: 44,
-        
-       }
+    },
+    item: {
+        padding: 10,
+        fontSize: 18,
+        height: 44,
+        color: 'white'
+    },
+    listItem: {
+        backgroundColor: 'rgba(0,0,0,0.3)'
+    }
 })
 
 
