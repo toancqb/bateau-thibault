@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet, Pressable, Image } from 'react-native';
+import { Text, StyleSheet, Pressable, Image } from 'react-native';
 
 export default function Button(props) {
   const { onPress, title = 'Save' } = props;
   return (
     <Pressable style={styles.button} onPress={onPress}>
-      <Image style={styles.tinyLogo} source={props.iconSrc} />
+      {props.iconSrc && (<Image style={styles.tinyLogo} source={props.iconSrc} />)}
       <Text style={styles.text}>{title}</Text>
     </Pressable>
   );
@@ -14,13 +14,16 @@ export default function Button(props) {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
+    justifyContent: 'start',
+    paddingVertical: 8,
+    paddingHorizontal: 8,
     borderRadius: 4,
     elevation: 3,
     backgroundColor: 'rgba(0,0,0, 0.4)',
-    margin: '4px'
+    margin: 4,
+    minHeight: 96,
+    display: 'flex',
+    flexDirection: 'row'
   },
   text: {
     fontSize: 16,
@@ -31,6 +34,7 @@ const styles = StyleSheet.create({
   tinyLogo: {
     width: 50,
     height: 50,
+    marginRight: '1rem'
   },
   logo: {
     width: 66,
