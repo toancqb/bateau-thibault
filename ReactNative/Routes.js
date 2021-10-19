@@ -6,9 +6,15 @@ import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen';
 import BateauxScreen from './screens/BateauxScreen';
 import RestaurantsScreen from './screens/RestaurantsScreen';
 import React from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import headerBg from './assets/images/navbarbg.png'
+import homeIcon from './assets/images/homeLogo.png'
+import cartIcon from './assets/images/cartLogo.png'
+import {Image} from 'react-native'
+import { ImageHeader } from './components/molecules';
 
 const Stack = createStackNavigator();
+
 
 const Routes = () => (
     <NavigationContainer>
@@ -23,17 +29,20 @@ const Routes = () => (
             />
             <Stack.Screen
                 options={{
-                    title: 'Le bateau de Thibault',
+                    title: 'Hello',
+                    headerTitle: (props) => <ImageHeader {...props}/>,
                     headerTintColor: '#fff',
+                    headerTitleAlign: 'center',
                     headerStyle: {
                         textAlign: 'center',
-                        backgroundColor: 'rgba(0,0,0, 0.7)'
+                        flex: 1,
+                        backgroundColor: 'rgb(0,0,0)',
                     },
                     headerRight: () => (
-                        <Text>Hello</Text>
+                        <View><Image style={styles.homeLogo} source={cartIcon}/></View>
                     ),
-                    headerLeft: () => (
-                        <Text>Back</Text>
+                    headerLeft: (props) => (
+                        <Text {...props}><Image  style={styles.homeLogo} source={homeIcon}/></Text>
                     ),
                 }}
                 name="ProductsAndPromotions"
@@ -66,5 +75,14 @@ const Routes = () => (
         </Stack.Navigator>
     </NavigationContainer>
 )
+
+const styles = StyleSheet.create({
+    homeLogo: {
+        width: 24,
+        height: 24,
+        marginEnd: 16,
+        marginStart: 16
+    }
+})
 
 export default Routes
