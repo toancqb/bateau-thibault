@@ -4,6 +4,10 @@ import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
 import RecetteScrean from './screens/RecetteScreen';
 import HomardScreen from './screens/Recettes/HomardScreen';
+import StJacquesScreen from './screens/Recettes/StJacquesScreen';
+import BarScreen from './screens/Recettes/BarScreen';
+import TourteauScreen from './screens/Recettes/TourteauScreen';
+import RecetteXYZScreen from './screens/Recettes/RecetteXYZ';
 import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen'
 import React from 'react'
 
@@ -38,6 +42,22 @@ const Routes = () => (
             <Stack.Screen
                 name="Homard"
                 component={HomardScreen}
+            />
+            <Stack.Screen
+                name="St Jacques"
+                component={StJacquesScreen}
+            />
+            <Stack.Screen
+                name="Bar"
+                component={BarScreen}
+            />
+            <Stack.Screen
+                name="Tourteau"
+                component={TourteauScreen}
+            />
+             <Stack.Screen
+                name="RecetteXYZ"
+                component={RecetteXYZScreen}
             />
         </Stack.Navigator>
     </NavigationContainer>

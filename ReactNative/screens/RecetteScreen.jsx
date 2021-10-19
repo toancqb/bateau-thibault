@@ -31,7 +31,7 @@ const SMALL_BUTTONS = [
     {
         icon: PoulpeIcon,
         title: 'Recette',
-        onPress: (props) => props.navigation.navigate('Recette1')
+        onPress: (props) => props.navigation.navigate('RecetteXYZ')
     },
     {
         icon: PoulpeIcon,
@@ -40,7 +40,7 @@ const SMALL_BUTTONS = [
     }
 ]
 
-export default function ContactScreen(props) {
+export default function RecetteScreen(props) {
     return(
         <View style={styles.container}>
             <ImageBackground source={background} resizeMode="cover" style={styles.image}>

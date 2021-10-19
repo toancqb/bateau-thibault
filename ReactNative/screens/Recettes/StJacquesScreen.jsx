@@ -1,22 +1,24 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, Text, View, Image} from 'react-native';
 import background from '../../assets/images/background.png';
-import homard from '../../assets/images/homardRecette.png'
+import stJacques from '../../assets/images/saintJacques.png'
 
-export default function HomardScreen() {
+export default function StJacquescreen() {
     return(
         <View style={styles.container}>
             <ImageBackground source={background} resizeMode="cover" style={styles.image}>
-                <Text style={styles.header}>Homard en chaud-froid</Text>
-                <Image source={homard} style={styles.imagePoisson}/>
-                <Text style={styles.smallText}>Faites cuire les homards dans l'eau bouillante avec du thym, 
-                du laurier, du sel et du poivre de Cayenne. Laissez cuire 20 minutes.
-                Egouttez-les et laissez-les refroidir.</Text>
+                <Text style={styles.header}>Noix de Saint-Jacques flambées au cognac</Text>
+                <Image source={stJacques} style={styles.imagePoisson}/>
+                <Text style={styles.smallText}>Faire fondre du beurre avec des échalottes puis ajouter
+                les noix de Saint-Jacques. Les faire revenir en laissant le milieu translucide puis les
+                retirer du feu.</Text>
                 <Text>{"\n"}</Text>
-                <Text style={styles.smallText}>Découpez les coffres des homards dans le sens de la longueur.</Text>
+                <Text style={styles.smallText}>Ajouter l'ail et le persil dans la poêle et laisser cuire
+                quelques secondes. Bien faire chauffer la poêle, puis flamber au Cognac. Une fois éteinte,
+                ajouter les noix de Saint-Jacques (Il ne faut pas les flamber car elles perderaient leur saveur).
+                </Text>
                 <Text>{"\n"}</Text>
-                <Text style={styles.smallText}>Mélangez la mayonnaise avec le cognac, 
-                le corail et la ciboulette ciseléee</Text>
+                <Text style={styles.smallText}>Déguster chaud nature ou accompagné d'une fondue de poireaux.</Text>
             </ImageBackground>
         </View>
     )

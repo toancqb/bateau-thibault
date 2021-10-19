@@ -1,22 +1,20 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, Text, View, Image} from 'react-native';
 import background from '../../assets/images/background.png';
-import homard from '../../assets/images/homardRecette.png'
+import bar from '../../assets/images/barRecette.png'
 
-export default function HomardScreen() {
+export default function BarScreen() {
     return(
         <View style={styles.container}>
             <ImageBackground source={background} resizeMode="cover" style={styles.image}>
-                <Text style={styles.header}>Homard en chaud-froid</Text>
-                <Image source={homard} style={styles.imagePoisson}/>
-                <Text style={styles.smallText}>Faites cuire les homards dans l'eau bouillante avec du thym, 
-                du laurier, du sel et du poivre de Cayenne. Laissez cuire 20 minutes.
-                Egouttez-les et laissez-les refroidir.</Text>
+                <Text style={styles.header}>Bar rôti au laurier frais</Text>
+                <Image source={bar} style={styles.imagePoisson}/>
+                <Text style={styles.smallText}>Sur une plaque ou un plat allant au four, disposer
+                 quelques feuilles de laurier frais, verser un filet d'huile d'olive et du gros sel.
+                 Disposer le bar, puis l'arroser d'un filet d'huile d'olive et mettre un peu de gros
+                 sel sur la peau.</Text>
                 <Text>{"\n"}</Text>
-                <Text style={styles.smallText}>Découpez les coffres des homards dans le sens de la longueur.</Text>
-                <Text>{"\n"}</Text>
-                <Text style={styles.smallText}>Mélangez la mayonnaise avec le cognac, 
-                le corail et la ciboulette ciseléee</Text>
+                <Text style={styles.smallText}>Cuire au four pendant 12 min à 240°C.</Text>
             </ImageBackground>
         </View>
     )
@@ -36,7 +34,7 @@ const styles=StyleSheet.create({
         fontStyle: "italic",
         fontWeight: 'bold',
         flex: '1 1 0%',
-        marginBottom: '14%',
+        marginBottom: '30%',
     },
     imagePoisson: {
         width: '370px',
