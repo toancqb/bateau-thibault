@@ -1,0 +1,73 @@
+<ion-content [fullscreen]="true">
+  <div class="home-page-wrapper">
+    <ion-grid>
+      <ion-row class="home-page-title">
+        <ion-col size=12>
+          <app-title [title]="'Le bateau de Thibault'"></app-title>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="home-page-content">
+        <ion-col size=12>
+          <p>Vente en direct de notre bateau</p>
+          <p>Produits selon la saison, Livraisons sur Paris</p>
+          <p>06.63.99.99.78</p>
+          <p>lebateaudethibault@gmail.com</p>
+          <p>www.facebook.com/lebateaudethibault</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size=12>          
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[0].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[0].icon)" class="icons">
+              {{ buttonsContent[0].title }}
+            </div>
+          </div> 
+          </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[1].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[1].icon)" class="icons">
+              {{ buttonsContent[1].title }}
+            </div>            
+          </div>          
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[2].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[2].icon)" class="icons">
+              {{ buttonsContent[2].title }}
+            </div>
+          </div>          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[3].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[3].icon)" class="icons">
+              {{ buttonsContent[3].title }}
+            </div>            
+          </div>          
+        </ion-col>
+
+        <ion-col size="6"> 
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[4].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[4].icon)" class="icons">
+              {{ buttonsContent[4].title }}
+            </div>
+          </div>          
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</ion-content>

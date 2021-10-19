@@ -1,0 +1,107 @@
+  <div class="home-page-wrapper">
+    <ion-grid>
+      <ion-row class="home-page-title">
+        <ion-col size=12>
+          <p id="page-component-title">
+            {{ title }}   
+          </p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="home-page-content">
+        <ion-col size=12>
+          <div *ngFor="let content of pageContent">
+            <p>{{ content }}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <!--
+      <div *ngFor="let btn of buttonsContent; even as even; index as idx">
+        <ng-template *ngIf="even">
+          <ion-row>
+            <ion-col size="6">
+              <div class="buttons-custom" (click)="onClickContact(buttonsContent[idx].path)">
+                <div class="buttons-content">
+                  <img [src]="getUrl(buttonsContent[idx].icon)" class="icons">
+                  {{ buttonsContent[idx].title }}
+                </div>            
+              </div>          
+            </ion-col>
+    
+            <ion-col size="6">
+              <div class="buttons-custom" (click)="onClickContact(buttonsContent[idx+1].path)">
+                <div class="buttons-content">
+                  <img [src]="getUrl(buttonsContent[idx+1].icon)" class="icons">
+                  {{ buttonsContent[idx+1].title }}
+                </div>
+              </div>          
+            </ion-col>
+          </ion-row>
+          </ng-template>
+        </div>
+      </div>
+      -->
+
+      <ion-row>
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[0].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[0].icon)" class="icons">
+              {{ buttonsContent[0].title }}
+            </div>            
+          </div>          
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[1].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[1].icon)" class="icons">
+              {{ buttonsContent[1].title }}
+            </div>
+          </div>          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[2].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[2].icon)" class="icons">
+              {{ buttonsContent[2].title }}
+            </div>            
+          </div>          
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[3].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[3].icon)" class="icons">
+              {{ buttonsContent[3].title }}
+            </div>
+          </div>          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[4].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[4].icon)" class="icons">
+              {{ buttonsContent[4].title }}
+            </div>            
+          </div>          
+        </ion-col>
+
+        <ion-col size="6"> 
+          <div class="buttons-custom" (click)="onClickContact(buttonsContent[5].path)">
+            <div class="buttons-content">
+              <img [src]="getUrl(buttonsContent[5].icon)" class="icons">
+              {{ buttonsContent[5].title }}
+            </div>
+          </div>          
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
