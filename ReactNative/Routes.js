@@ -2,6 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
+import RecetteScrean from './screens/RecetteScreen';
+import HomardScreen from './screens/Recettes/HomardScreen';
 import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen'
 import React from 'react'
 
@@ -28,6 +30,14 @@ const Routes = () => (
             <Stack.Screen
                 name="Contact"
                 component={ContactScreen}
+            />
+            <Stack.Screen
+                name="Recette"
+                component={RecetteScrean}
+            />
+            <Stack.Screen
+                name="Homard"
+                component={HomardScreen}
             />
         </Stack.Navigator>
     </NavigationContainer>

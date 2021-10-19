@@ -16,17 +16,17 @@ export default function ContactScreen() {
                     <Text style={styles.smallText}>www.facebook.com/lebateaudethibault</Text>
                 </View>
                 <View>
-                    <Text style={styles.smallText}>Qu'il est chaud le soleil</Text>
-                    <Text style={styles.smallText}>Quand nous sommes en vacances</Text>
-                    <Text style={styles.smallText}>Y a d'la joie, des hirondelles</Text>
-                    <Text style={styles.smallText}>C'est le sud de la France</Text>
-                    <Text style={styles.smallText}>Papa bricole au garage</Text>
-                    <Text style={styles.smallText}>Maman lit dans la chaise longue</Text>
-                    <Text style={styles.smallText}>Dans ce joli paysage</Text>
-                    <Text style={styles.smallText}>Moi, je me balade en tongs</Text>
+                    <Text style={styles.textBold}>Qu'il est chaud le soleil</Text>
+                    <Text style={styles.textBold}>Quand nous sommes en vacances</Text>
+                    <Text style={styles.textBold}>Y a d'la joie, des hirondelles</Text>
+                    <Text style={styles.textBold}>C'est le sud de la France</Text>
+                    <Text style={styles.textBold}>Papa bricole au garage</Text>
+                    <Text style={styles.textBold}>Maman lit dans la chaise longue</Text>
+                    <Text style={styles.textBold}>Dans ce joli paysage</Text>
+                    <Text style={styles.textBold}>Moi, je me balade en tongs</Text>
                     <Text>{"\n"}</Text>
-                    <Text style={styles.smallText}>Que du Bonheur!</Text>
-                    <Text style={styles.smallText}>Que du Bonheur!</Text>
+                    <Text style={styles.textBold}>Que du Bonheur!</Text>
+                    <Text style={styles.textBold}>Que du Bonheur!</Text>
                 </View>
             </ImageBackground>
         </View>
@@ -64,5 +64,12 @@ const styles=StyleSheet.create({
     },
     elemContact: {
         marginBottom: '10%',
+    },
+    textBold: {
+        color: "black",
+        fontSize: 12,
+        textAlign: "center",
+        fontStyle: "italic",
+        fontWeight: 'bold'
     },
 })
