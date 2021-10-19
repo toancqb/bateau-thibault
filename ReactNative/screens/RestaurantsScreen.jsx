@@ -9,33 +9,27 @@ import ShipIcon from '../assets/images/ancre.png'
 
 const buttons = [
     {
-        icon: deLaBriseIcon,
-        title: 'De la Brise',
+        title: 'Bistrot des Gaçons',
         onPress: (props) => props.navigation.navigate('Bateaux')
     },
     {
-        icon: saphirIcon,
-        title: 'Saphir',
+        title: 'Les fous de l\'île',
         onPress: (props) => props.navigation.navigate('Restaurants')
     },
     {
-        icon: gastMicherIcon,
-        title: 'Gast Micher',
+        title: 'Bistrot Landais',
         onPress: (props) => props.navigation.navigate('Recette')
     },
     {
-        icon: aquilonIcon,
-        title: 'Aquilon',
+        title: 'Ville 9-Trois',
         onPress: (props) => props.navigation.navigate('Contact')
     },
     {
-        icon: ShipIcon,
-        title: 'Contact',
+        title: 'Bistrot le Sommelier',
         onPress: (props) => props.navigation.navigate('Contact')
     },
     {
-        icon: ShipIcon,
-        title: 'Contact',
+        title: 'Devenez partenaire!',
         onPress: (props) => props.navigation.navigate('Contact')
     }
 ]
@@ -44,8 +38,8 @@ export default function ProductsAndPromotions() {
     return (
         <Background>
             <MainLayout 
-            header={'Les bateaux partenaires'}
-            descriptions={['Tous les eaux mènent le bateau Thibault']} 
+            header={'Restaurants partenaires'}
+            descriptions={['Tous les restaurants partenaires avec le bateau Thibault']} 
             buttons={buttons}
             />
         </Background>
