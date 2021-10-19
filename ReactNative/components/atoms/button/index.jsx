@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet, Pressable, Image } from 'react-native';
+import { Text, StyleSheet, Pressable, Image } from 'react-native';
 
 export default function Button(props) {
   const { onPress, title = 'Save' } = props;
   return (
     <Pressable style={styles.button} onPress={onPress}>
-      <Image style={styles.tinyLogo} source={props.iconSrc} />
+      {props.iconSrc && (<Image style={styles.tinyLogo} source={props.iconSrc} />)}
       <Text style={styles.text}>{title}</Text>
     </Pressable>
   );

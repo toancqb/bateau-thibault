@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
 import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen'
+import BateauxScreen from './screens/BateauxScreen'
 import React from 'react'
 
 const Stack = createStackNavigator();
@@ -17,7 +18,7 @@ const Routes = () => (
             />
             <Stack.Screen
                 options={{
-                    title: 'Le bateau de Thibault', 
+                    title: 'Le bateau de Thibault',
                     headerStyle: {
                         textAlign: 'center',
                     },
@@ -26,8 +27,14 @@ const Routes = () => (
                 component={ProductsAndPromotionsScreen}
             />
             <Stack.Screen
+                options={{ headerShown: false }}
                 name="Contact"
                 component={ContactScreen}
+            />
+            <Stack.Screen
+                options={{ headerShown: false }}
+                name="Bateaux"
+                component={BateauxScreen}
             />
         </Stack.Navigator>
     </NavigationContainer>
