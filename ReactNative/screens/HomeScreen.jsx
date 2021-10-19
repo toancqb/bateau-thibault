@@ -13,7 +13,7 @@ const BIG_BUTTONS = [
     {
         icon: FishIcon,
         title: 'Produits et promotions',
-        onPress: () => this.props.navigation.navigate('ProductsAndPromotions')
+        onPress: (props) => props.navigation.navigate('ProductsAndPromotions')
     },
 ]
 
