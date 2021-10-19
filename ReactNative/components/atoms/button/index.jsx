@@ -4,14 +4,14 @@ import { Text, StyleSheet, Pressable, Image } from 'react-native';
 export default function Button(props) {
   const { onPress, title = 'Save' } = props;
   return (
-    <Pressable style={styles.button} onPress={onPress}>
-      {props.iconSrc && (<Image style={styles.tinyLogo} source={props.iconSrc} />)}
-      <Text style={styles.text}>{title}</Text>
+    <Pressable style={styles(props).button} onPress={onPress}>
+      {props.iconSrc && (<Image style={styles(props).tinyLogo} source={props.iconSrc} />)}
+      <Text style={styles(props).text}>{title}</Text>
     </Pressable>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = (props) => StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'start',
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     elevation: 3,
     backgroundColor: 'rgba(0,0,0, 0.4)',
     margin: 4,
-    minHeight: 96,
+    minHeight: props.minHeight || 96,
     display: 'flex',
     flexDirection: 'row'
   },
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   tinyLogo: {
-    width: 50,
-    height: 50,
+    width: props.tinyLogoWidth || 50,
+    height: props.tinyLogoHeight || 50,
     marginRight: '1rem'
   },
   logo: {
