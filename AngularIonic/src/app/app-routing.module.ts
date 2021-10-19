@@ -15,10 +15,14 @@ const routes: Routes = [
     loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
   },
   {
+    path: 'saphir',
+    loadChildren: () => import('./bateaux/saphir/saphir.module').then( m => m.SaphirPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  }, 
+  }
 ];
 
 @NgModule({

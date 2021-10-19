@@ -10,9 +10,7 @@ export class PageMainComponent {
 
   @Input() title: string;
   @Input() pageContent: string[];
-  @Input() buttonsContent: ButtonsInterface[];
-
-  
+  @Input() buttonsContent: ButtonsInterface[];  
 
   constructor(private router: Router) {}
 
@@ -23,7 +21,6 @@ export class PageMainComponent {
   getUrl(name: string): string {
     return '../../assets/icon/' + name; 
   }
-
 }
 
 export interface ButtonsInterface {
