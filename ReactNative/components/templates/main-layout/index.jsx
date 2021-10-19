@@ -1,9 +1,10 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native';
+import { Button } from '../../atoms';
 
 const MainLayout = ({ header, descriptions, buttons }) => {
     return (
-        <View>
+        <>
             <Text style={styles.header}>{header}</Text>
             {
                 descriptions.map(description => (
@@ -29,7 +30,7 @@ const MainLayout = ({ header, descriptions, buttons }) => {
                         }
                     </View>
                 </View>
-        </View>
+        </>
     )
 }
 
@@ -66,6 +67,6 @@ const styles = StyleSheet.create({
         fontStyle: "italic"
     },
     button: {
-        padding: "1rem 2rem"
+        padding: "1rem 2rem",
     }
 });
