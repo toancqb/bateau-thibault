@@ -13,7 +13,7 @@ const BIG_BUTTONS = [
     {
         icon: FishIcon,
         title: 'Produits et promotions',
-        onPress: () => this.props.navigation.navigate('ProductsAndPromotion')
+        onPress: () => this.props.navigation.navigate('ProductsAndPromotions')
     },
 ]
 
@@ -52,7 +52,7 @@ export default function HomeScreen(props) {
                 <Text style={styles.smallText}>www.facebook.com/lebateaudethibault</Text>
                 <View style={{ marginTop: '15%', width: "100%" }}>
                     <View style={{ width: '100%' }}>
-                        <Button title="Produits et promotions" iconSrc={FishIcon} onPress={() => props.navigation.navigate('ProductsAndPromotion')} />
+                        <Button title="Produits et promotions" iconSrc={FishIcon} onPress={() => props.navigation.navigate('ProductsAndPromotions')} />
                     </View>
 
                     <View style={{
