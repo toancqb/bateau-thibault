@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BateauxPage implements OnInit {
 
+  title: string = "Nos bateaux partenaires";
+
   pageContent: string[] = [
-    'Vente en direct de notre bateau',
-    'Produits selon la saison, Livraisons sur Paris',
+    'Tous les eaux menent a Thibault',
     '06.63.99.99.78',
     'lebateaudethibault@gmail.com',
     'www.facebook.com/lebateaudethibault'
@@ -22,19 +23,19 @@ export class BateauxPage implements OnInit {
       "path": "de-la-brise"
     },
     {
-      "icon": "ancre.png",
-      "title": "Bateaux",
-      "path": "bateaux"
+      "icon": "saphir_icon.png",
+      "title": "Saphir",
+      "path": "saphir"
     },
     {
-      "icon": "restaurant.png",
-      "title": "Restaurants",
-      "path": "restaurants"
+      "icon": "gastMicher_icon.png",
+      "title": "Gast Micher",
+      "path": "gast-micher"
     },
     {
-      "icon": "recette.png",
-      "title": "Recettes",
-      "path": "recettes"
+      "icon": "aquilon_icon.png",
+      "title": "Aquilon",
+      "path": "aquilon"
     },
     {
       "icon": "tourteau.png",
