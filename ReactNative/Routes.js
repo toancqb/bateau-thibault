@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen';
-import ContactScreen from './screens/ContactScreen';
+import DetailScreen from './screens/DetailScreen';
 import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen';
 import BateauxScreen from './screens/BateauxScreen';
 import RestaurantsScreen from './screens/RestaurantsScreen';
@@ -53,8 +53,8 @@ const Routes = () => (
                     title: '',
                     headerTransparent: true,
                 }}
-                name="Contact"
-                component={ContactScreen}
+                name="Detail"
+                component={DetailScreen}
             />
             <Stack.Screen
                 options={{
