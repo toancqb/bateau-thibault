@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen';
+import ContactScreen from './screens/ContactScreen';
 import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen'
 import React from 'react'
 
@@ -23,6 +24,10 @@ const Routes = () => (
                 }}
                 name="ProductsAndPromotions"
                 component={ProductsAndPromotionsScreen}
+            />
+            <Stack.Screen
+                name="Contact"
+                component={ContactScreen}
             />
         </Stack.Navigator>
     </NavigationContainer>

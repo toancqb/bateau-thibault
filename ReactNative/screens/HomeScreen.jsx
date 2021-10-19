@@ -21,22 +21,22 @@ const SMALL_BUTTONS = [
     {
         icon: ShipIcon,
         title: 'Bateaux',
-        onPress: () => props.navigation.navigate('Bateaux')
+        onPress: (props) => props.navigation.navigate('Bateaux')
     },
     {
         icon: RestaurantIcon,
         title: 'Restaurants',
-        onPress: () => props.navigation.navigate('Restaurants')
+        onPress: (props) => props.navigation.navigate('Restaurants')
     },
     {
         icon: RecipeIcon,
         title: 'Recette',
-        onPress: () => props.navigation.navigate('Recette')
+        onPress: (props) => props.navigation.navigate('Recette')
     },
     {
         icon: ContactIcon,
         title: 'Contact',
-        onPress: () => props.navigation.navigate('Contact')
+        onPress: (props) => props.navigation.navigate('Contact')
     }
 ]
 
@@ -63,7 +63,7 @@ export default function HomeScreen(props) {
                         {
                             SMALL_BUTTONS.map(
                                 buttonData => (
-                                    <Button key={buttonData.title} title={buttonData.title} iconSrc={buttonData.icon} onPress={buttonData.onPress}
+                                    <Button key={buttonData.title} title={buttonData.title} iconSrc={buttonData.icon} onPress={() => buttonData.onPress(props)}
                                     />
                                 )
                             )
