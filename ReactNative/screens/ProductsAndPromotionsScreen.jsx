@@ -33,8 +33,9 @@ const styles = StyleSheet.create({
     text: {
         textAlign: 'center',
         fontSize: 18,
-        fontWeight: 'bold',
-        marginTop: 16
+        fontWeight: '600',
+        marginTop: 16,
+        fontStyle: 'italic'
     },
     item: {
         padding: 10,
