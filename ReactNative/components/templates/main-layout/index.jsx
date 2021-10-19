@@ -37,13 +37,6 @@ const MainLayout = ({ header, descriptions, buttons }) => {
 export default MainLayout
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    image: {
-        flex: 1,
-        justifyContent: "center"
-    },
     header: {
         color: "white",
         fontSize: 32,
@@ -51,11 +44,12 @@ const styles = StyleSheet.create({
         fontStyle: "italic",
         fontWeight: 'bold',
         flex: '1 1 0%',
-        marginBottom: '15%'
+        marginBottom: '15%',
+        marginTop: '30%'
     },
     textBold: {
         color: "black",
-        fontSize: 16,
+        fontSize: 14,
         textAlign: "center",
         fontStyle: "italic",
         fontWeight: 'bold'
