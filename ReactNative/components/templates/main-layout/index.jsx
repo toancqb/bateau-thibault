@@ -2,7 +2,9 @@ import React from 'react'
 import { StyleSheet, View, Text } from 'react-native';
 import { Button } from '../../atoms';
 
-const MainLayout = ({ header, descriptions, buttons }) => {
+const MainLayout = (props) => {
+    const {header, descriptions, buttons, navigationProps} = props
+
     return (
         <>
             <Text style={styles.header}>{header}</Text>
@@ -23,7 +25,7 @@ const MainLayout = ({ header, descriptions, buttons }) => {
                         {
                             buttons.map(
                                 buttonData => (
-                                    <Button key={buttonData.title} title={buttonData.title} iconSrc={buttonData.icon} onPress={() => buttonData.onPress(props)}
+                                    <Button key={buttonData.title} title={buttonData.title} iconSrc={buttonData.icon} onPress={() => buttonData.onPress(navigationProps)}
                                     />
                                 )
                             )

@@ -1,6 +1,5 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
-import background from '../assets/images/background.png';
+import { StyleSheet, Text, View } from 'react-native';
 import { Button } from '../components/atoms';
 import FishIcon from '../assets/images/poisson.png'
 import ShipIcon from '../assets/images/ancre.png'
@@ -8,15 +7,8 @@ import RestaurantIcon from '../assets/images/restaurant.png'
 import RecipeIcon from '../assets/images/recette.png'
 import ContactIcon from '../assets/images/tourteau.png'
 import { Background } from '../components/templates';
+import tig from '../assets/images/TIG.png'
 
-
-const BIG_BUTTONS = [
-    {
-        icon: FishIcon,
-        title: 'Produits et promotions',
-        onPress: (props) => props.navigation.navigate('ProductsAndPromotions')
-    },
-]
 
 const SMALL_BUTTONS = [
     {
@@ -37,7 +29,11 @@ const SMALL_BUTTONS = [
     {
         icon: ContactIcon,
         title: 'Contact',
-        onPress: (props) => props.navigation.navigate('Contact')
+        onPress: (props) => props.navigation.navigate('Detail', {
+            img: tig,
+            header: 'Le Bateaux de Thibault',
+            subHeader: '06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault\n'
+        })
     }
 ]
 
