@@ -2,9 +2,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
-import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen'
-import BateauxScreen from './screens/BateauxScreen'
-import React from 'react'
+import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen';
+import BateauxScreen from './screens/BateauxScreen';
+import RestaurantsScreen from './screens/RestaurantsScreen';
+import React from 'react';
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,11 @@ const Routes = () => (
                 options={{ headerShown: false }}
                 name="Bateaux"
                 component={BateauxScreen}
+            />
+            <Stack.Screen
+                options={{ headerShown: false }}
+                name="Restaurants"
+                component={RestaurantsScreen}
             />
         </Stack.Navigator>
     </NavigationContainer>
