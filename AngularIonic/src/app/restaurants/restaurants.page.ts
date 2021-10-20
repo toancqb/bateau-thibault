@@ -20,7 +20,7 @@ export class RestaurantsPage implements OnInit {
     {
       "icon": "desGascons_icon.png",
       "title": "Bistrot des Gascons",
-      "path": "gascons"
+      "path": "restaurants/gascons"
     },
     {
       "icon": "fousDeLIle_icon.png",
