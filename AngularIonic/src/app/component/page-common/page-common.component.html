@@ -13,10 +13,10 @@
 
     <app-title [title]="title"></app-title>
 
-    <img [src]="img" />
+    <img class ="img-marging" [src]="img" />
 
-    <div>
-      <p>{{ contents[0] }}</p>
+    <div *ngFor="let content of contents" class="text">
+      <p>{{ content }}</p>
     </div>
   </div>
 </div>

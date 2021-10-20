@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'recettes',
     loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
+  },
+  {
+    path: 'homard',
+    loadChildren: () => import('./recettes/homard/homard.module').then( m => m.HomardPageModule)
   }
 ];
 
