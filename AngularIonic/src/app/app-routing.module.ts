@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'homard',
     loadChildren: () => import('./recettes/homard/homard.module').then( m => m.HomardPageModule)
+  },
+  {
+    path: 'bar',
+    loadChildren: () => import('./recettes/bar/bar.module').then( m => m.BarPageModule)
   }
 ];
 
