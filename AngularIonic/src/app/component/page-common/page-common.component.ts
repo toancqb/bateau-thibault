@@ -10,6 +10,9 @@ export class PageCommonComponent implements OnInit {
   @Input() title: string;
   @Input() img: string;
   @Input() contents: string[];
+  @Input() poem: string[];
+  @Input() happiness: string;
+
 
   constructor() { }
 
