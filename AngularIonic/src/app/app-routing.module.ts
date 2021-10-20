@@ -31,11 +31,6 @@ const routes: Routes = [
     loadChildren: () => import('./bateaux/aquilon/aquilon.module').then( m => m.AquilonPageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
     path: 'restaurants',
     loadChildren: () => import('./restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
   },
@@ -50,6 +45,23 @@ const routes: Routes = [
   {
     path: 'bar',
     loadChildren: () => import('./recettes/bar/bar.module').then( m => m.BarPageModule)
+  },
+  {
+    path: 'stjacques',
+    loadChildren: () => import('./recettes/st-jacques/st-jacques.module').then( m => m.StJacquesPageModule)
+  },
+  {
+    path: 'tourteau',
+    loadChildren: () => import('./recettes/tourteau/tourteau.module').then( m => m.TourteauPageModule)
+  },
+  {
+    path: 'recettexyz',
+    loadChildren: () => import('./recettes/recette-xyz/recette-xyz.module').then( m => m.RecetteXYZPageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 

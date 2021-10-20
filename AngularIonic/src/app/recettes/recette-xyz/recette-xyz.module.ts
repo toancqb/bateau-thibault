@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StJacquesPageRoutingModule } from './st-jacques-routing.module';
+import { RecetteXYZPageRoutingModule } from './recette-xyz-routing.module';
 
-import { StJacquesPage } from './st-jacques.page';
+import { RecetteXYZPage } from './recette-xyz.page';
 import { PageCommonComponent } from 'src/app/component/page-common/page-common.component';
 
 
@@ -15,8 +15,8 @@ import { PageCommonComponent } from 'src/app/component/page-common/page-common.c
     CommonModule,
     FormsModule,
     IonicModule,
-    StJacquesPageRoutingModule
+    RecetteXYZPageRoutingModule
   ],
-  declarations: [StJacquesPage, PageCommonComponent]
+  declarations: [RecetteXYZPage, PageCommonComponent]
 })
-export class StJacquesPageModule {}
+export class RecetteXYZPageModule {}

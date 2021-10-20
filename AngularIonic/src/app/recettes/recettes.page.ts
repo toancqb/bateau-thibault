@@ -40,7 +40,7 @@ export class RecettesPage implements OnInit {
     {
       "icon": "poulpe.png",
       "title": "Recette",
-      "path": "recette"
+      "path": "recettexyz"
     },
     {
       "icon": "poulpe.png",

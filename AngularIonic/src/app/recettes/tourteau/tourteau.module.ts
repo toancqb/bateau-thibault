@@ -4,19 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StJacquesPageRoutingModule } from './st-jacques-routing.module';
+import { TourteauPageRoutingModule } from './tourteau-routing.module';
 
-import { StJacquesPage } from './st-jacques.page';
+import { TourteauPage } from './tourteau.page';
 import { PageCommonComponent } from 'src/app/component/page-common/page-common.component';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    StJacquesPageRoutingModule
+    TourteauPageRoutingModule
   ],
-  declarations: [StJacquesPage, PageCommonComponent]
+  declarations: [TourteauPage, PageCommonComponent]
 })
-export class StJacquesPageModule {}
+export class TourteauPageModule {}

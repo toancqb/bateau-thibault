@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: '',
     component: RecettesPage
-  },  {
+  },
+  {
     path: 'homard',
     loadChildren: () => import('./homard/homard.module').then( m => m.HomardPageModule)
   },
@@ -18,6 +19,14 @@ const routes: Routes = [
   {
     path: 'st-jacques',
     loadChildren: () => import('./st-jacques/st-jacques.module').then( m => m.StJacquesPageModule)
+  },
+  {
+    path: 'tourteau',
+    loadChildren: () => import('./tourteau/tourteau.module').then( m => m.TourteauPageModule)
+  },
+  {
+    path: 'recette-xyz',
+    loadChildren: () => import('./recette-xyz/recette-xyz.module').then( m => m.RecetteXYZPageModule)
   }
 
 ];
