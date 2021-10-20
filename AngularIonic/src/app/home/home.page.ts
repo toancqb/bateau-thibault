@@ -48,7 +48,7 @@ export class HomePage {
 
 }
 
-export interface ButtonsInterface {
+interface ButtonsInterface {
   icon: string,
   title: string,
   path: string

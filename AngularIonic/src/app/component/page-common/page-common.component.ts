@@ -13,9 +13,12 @@ export class PageCommonComponent implements OnInit {
   @Input() poem: string[];
   @Input() happiness: string;
 
-
   constructor() { }
 
   ngOnInit() {}
+
+  getImgUrl(name: string): string {
+    return '../../assets/imgs/' + name;
+  }
 
 }

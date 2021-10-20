@@ -1,0 +1,39 @@
+{
+    "bateaux": {
+        "pageTitle": "Nos bateaux partenaires",
+        "pageContent": "Tous les eaux menent a Thibault\n06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault",
+        "buttons": {
+            "brise": {
+                "icon": "deLaBrise_icon.png",
+                "title": "De la Brise",
+                "path": "de-la-brise",
+                "contents": ""
+            },
+            "saphir": {
+                "icon": "saphir_icon.png",
+                "title": "Saphir",
+                "path": "de-la-brise",
+                "contents": ""
+            },
+            "gastmicher": {
+                "icon": "gastMicher_icon.png",
+                "title": "Gast Micher",
+                "path": "gast-micher",
+                "contents": ""
+            },
+            "aquilon": {
+                "icon": "aquilon_icon.png",
+                "title": "Aquilon",
+                "path": "aquilon",
+                "contents": ""
+            },
+            "contact": {
+                "icon": "tourteau.png",
+                "title": "Contact",
+                "path": "contact",
+                "contents": ""
+            }            
+        }
+
+    }
+}

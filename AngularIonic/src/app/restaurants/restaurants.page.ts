@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonsInterface } from '../interfaces';
 
 @Component({
   selector: 'app-restaurants',
@@ -18,34 +19,64 @@ export class RestaurantsPage implements OnInit {
 
   public buttonsContent: ButtonsInterface[] = [
     {
-      "icon": "desGascons_icon.png",
-      "title": "Bistrot des Gascons",
-      "path": "restaurants/gascons"
+      "name": "gascons",
+      "detail": {
+        "icon": "desGascons_icon.png",
+        "img": "desGascons.png",
+        "title": "Bistrot des Gascons",
+        "path": "restaurants/gascons",
+        "contents": [""]
+      }
     },
     {
-      "icon": "fousDeLIle_icon.png",
-      "title": "Les fous de l'ile",
-      "path": "fous-de-l-ile"
+      "name": "lile",
+      "detail": {
+        "icon": "fousDeLIle_icon.png",
+        "img": "fousDeLIle.png",
+        "title": "Les fous de l'ile",
+        "path": "fous-de-l-ile",
+        "contents": [""]
+      }
     },
     {
-      "icon": "bistrotLandais_icon.png",
-      "title": "Bistrot Landais",
-      "path": "landais"
+      "name": "landais",
+      "detail": {
+        "icon": "bistrotLandais_icon.png",
+        "img": "bistrotLandais.png",
+        "title": "Bistrot Landais",
+        "path": "landais",
+        "contents": [""]
+      }
     },
     {
-      "icon": "villa9Trois_icon.png",
-      "title": "Villa 9-Trois",
-      "path": "neuf-trois"
+      "name": "neuftrois",
+      "detail": {
+        "icon": "villa9Trois_icon.png",
+        "img": "villa9Trois.png",
+        "title": "Villa 9-Trois",
+        "path": "neuf-trois",
+        "contents": [""]
+      }
     },
     {
-      "icon": "duSommelier_icon.png",
-      "title": "Bistrot du Sommelier",
-      "path": "sommelier"
+      "name": "sommelier",
+      "detail": {
+        "icon": "duSommelier_icon.png",
+        "img": "duSommelier.png",
+        "title": "Bistrot du Sommelier",
+        "path": "sommelier",
+        "contents": [""]
+      }
     },
     {
-      "icon": "duSommelier_icon.png",
-      "title": "Devenez partenaire!",
-      "path": "partenaire"
+      "name": "partenaire",
+      "detail": {
+        "icon": "duSommelier_icon.png",
+        "img": "duSommelier.png",
+        "title": "Devenez partenaire!",
+        "path": "partenaire",
+        "contents": [""]
+      }
     }
   ];
 
@@ -55,10 +86,3 @@ export class RestaurantsPage implements OnInit {
   }
 
 }
-
-interface ButtonsInterface {
-  icon: string,
-  title: string,
-  path: string
-}
-

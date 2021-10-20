@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonsInterface } from '../interfaces';
 
 @Component({
   selector: 'app-recettes',
@@ -18,34 +19,64 @@ export class RecettesPage implements OnInit {
 
   public buttonsContent: ButtonsInterface[] = [
     {
-      "icon": "homardRecette_icon.png",
-      "title": "Homard",
-      "path": "homard"
+      "name": "homard",
+      "detail": {
+        "icon": "homardRecette_icon.png",
+        "img": "homardRecette.png",
+        "title": "Homard",
+        "path": "homard",
+        "contents": [""]
+      }
     },
     {
-      "icon": "saintJacques_icon.png",
-      "title": "St Jacques",
-      "path": "stjacques"
+      "name": "stjacques",
+      "detail": {
+        "icon": "saintJacques_icon.png",
+        "title": "St Jacques",
+        "img": "saintJacques.png",
+        "path": "stjacques",
+        "contents": [""]
+      }
     },
     {
-      "icon": "barRecette_icon.png",
-      "title": "Bar",
-      "path": "bar"
+      "name": "bar",
+      "detail": {
+        "icon": "barRecette_icon.png",
+        "img": "barRecette.png",
+        "title": "Bar",
+        "path": "bar",
+        "contents": [""]
+      }
     },
     {
-      "icon": "poulpe.png",
-      "title": "Tourteau",
-      "path": "tourteau"
+      "name": "tourteau",
+      "detail": {
+        "icon": "poulpe.png",
+        "img": "poulpe.png",
+        "title": "Tourteau",
+        "path": "tourteau",
+        "contents": [""]
+      }
     },
     {
-      "icon": "poulpe.png",
-      "title": "Recette",
-      "path": "recette"
+      "name": "recette",
+      "detail": {
+        "icon": "poulpe.png",
+        "img": "tourteau.png",
+        "title": "Recette",
+        "path": "recette",
+        "contents": [""]
+      }
     },
     {
-      "icon": "poulpe.png",
-      "title": "Recette",
-      "path": "recette"
+      "name": "recette",
+      "detail": {
+        "icon": "poulpe.png",
+        "img": "tourteau.png",
+        "title": "Recette",
+        "path": "recette",
+        "contents": [""]
+      }
     }
   ];
 
@@ -54,10 +85,4 @@ export class RecettesPage implements OnInit {
   ngOnInit() {
   }
 
-}
-
-interface ButtonsInterface {
-  icon: string,
-  title: string,
-  path: string
 }

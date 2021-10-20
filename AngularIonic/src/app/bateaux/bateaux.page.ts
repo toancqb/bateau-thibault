@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
+import { NavController } from '@ionic/angular';
+import { ButtonsInterface } from '../interfaces';
 
 @Component({
   selector: 'app-bateaux',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bateaux.page.scss'],
 })
 export class BateauxPage implements OnInit {
+
+  navigationExtras: NavigationExtras;
 
   title: string = "Nos bateaux partenaires";
 
@@ -18,46 +23,71 @@ export class BateauxPage implements OnInit {
 
   public buttonsContent: ButtonsInterface[] = [
     {
-      "icon": "deLaBrise_icon.png",
-      "title": "De la Brise",
-      "path": "de-la-brise"
+      "name": "brise",
+      "detail": {
+        "icon": "deLaBrise_icon.png",
+        "img": "deLaBrise.png",
+        "title": "De la Brise",
+        "path": "de-la-brise",
+        "contents": [""]
+      }
     },
     {
-      "icon": "saphir_icon.png",
-      "title": "Saphir",
-      "path": "saphir"
+      "name": "saphir",
+      "detail": {
+        "icon": "saphir_icon.png",
+        "img": "saphir.png",
+        "title": "Saphir",
+        "path": "saphir",
+        "contents": [""]
+      }
     },
     {
-      "icon": "gastMicher_icon.png",
-      "title": "Gast Micher",
-      "path": "gast-micher"
+      "name": "gastmicher",
+      "detail": {
+        "icon": "gastMicher_icon.png",
+        "img": "gastMicher.png",
+        "title": "Gast Micher",
+        "path": "gast-micher",
+        "contents": [""]
+      }
     },
     {
-      "icon": "aquilon_icon.png",
-      "title": "Aquilon",
-      "path": "aquilon"
+      "name": "aquilon",
+      "detail": {
+        "icon": "aquilon_icon.png",
+        "img": "aquilon.png",
+        "title": "Aquilon",
+        "path": "aquilon",
+        "contents": [""]
+      }
     },
     {
-      "icon": "tourteau.png",
-      "title": "Contact",
-      "path": "contact"
+      "name": "contact",
+      "detail": {
+        "icon": "tourteau.png",
+        "img": "TIG.png",
+        "title": "Contact",
+        "path": "contact",
+        "contents": [""]
+      }
     },
     {
-      "icon": "tourteau.png",
-      "title": "Contact",
-      "path": "contact"
-    }
+      "name": "contact",
+      "detail": {
+        "icon": "tourteau.png",
+        "img": "TIG.png",
+        "title": "Contact",
+        "path": "contact",
+        "contents": [""]
+      }
+    },
   ];
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+    
   }
 
-}
-
-interface ButtonsInterface {
-  icon: string,
-  title: string,
-  path: string
 }

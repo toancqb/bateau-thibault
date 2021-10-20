@@ -31,11 +31,6 @@ const routes: Routes = [
     loadChildren: () => import('./bateaux/aquilon/aquilon.module').then( m => m.AquilonPageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
     path: 'restaurants',
     loadChildren: () => import('./restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
   },
@@ -46,7 +41,16 @@ const routes: Routes = [
   {
     path: 'homard',
     loadChildren: () => import('./recettes/homard/homard.module').then( m => m.HomardPageModule)
-  }
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  }  
 ];
 
 @NgModule({

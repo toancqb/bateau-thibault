@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
+import { ButtonsInterface } from '../../interfaces';
 
 @Component({
   selector: 'app-page-main',
@@ -8,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class PageMainComponent {
 
-  @Input() title: string;
+  @Input() pageTitle: string;
   @Input() pageContent: string[];
-  @Input() buttonsContent: ButtonsInterface[];  
+  @Input() buttonsContent: ButtonsInterface[];
 
   constructor(private router: Router) {}
 
@@ -18,16 +19,29 @@ export class PageMainComponent {
     this.router.navigate(['/' + name]);
   }
 
+  private getButtonContent(name: string): ButtonsInterface {
+    for(let i = 0;i < this.buttonsContent.length; i++) {
+      if (this.buttonsContent[i].name === name) {
+        console.log(this.buttonsContent[i]);
+        return this.buttonsContent[i];
+      }
+    }
+    console.log("null");
+    return null;
+  }
+
+  public onLoadDetailPage(name: string): void {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        id: name, 
+        buttonContent: this.getButtonContent(name)
+      }
+    };
+    this.router.navigate(['/detail'], navigationExtras);
+  }
+
   getUrl(name: string): string {
-    /*console.log("[" + name + "]");
-    if (name === '')
-      return '';*/
-    return '../../assets/icon/' + name; 
+    return '../assets/icon/' + name; 
   }
 }
 
-export interface ButtonsInterface {
-  icon: string,
-  title: string,
-  path: string
-}
