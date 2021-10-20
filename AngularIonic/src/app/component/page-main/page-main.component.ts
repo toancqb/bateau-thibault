@@ -19,8 +19,9 @@ export class PageMainComponent {
   }
 
   getUrl(name: string): string {
-    if (name === "")
-      return '';
+    /*console.log("[" + name + "]");
+    if (name === '')
+      return '';*/
     return '../../assets/icon/' + name; 
   }
 }

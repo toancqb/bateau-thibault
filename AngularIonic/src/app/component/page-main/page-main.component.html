@@ -54,9 +54,7 @@
         <ion-col size="6">
           <div class="buttons-custom" (click)="onClickContact(buttonsContent[0].path)">
             <div class="buttons-content">
-              <ng-template *ngIf="getUrl(buttonsContent[1].icon) !== ''">
                 <img [src]="getUrl(buttonsContent[0].icon)" class="icons">
-              </ng-template>
               {{ buttonsContent[0].title }}
             </div>            
           </div>          
@@ -65,12 +63,10 @@
         <ion-col size="6">
           <div class="buttons-custom" (click)="onClickContact(buttonsContent[1].path)">
             <div class="buttons-content">
-              <ng-template *ngIf="getUrl(buttonsContent[1].icon)">
                 <img [src]="getUrl(buttonsContent[1].icon)" class="icons">
-              </ng-template>              
               {{ buttonsContent[1].title }}
             </div>
-          </div>          
+          </div>
         </ion-col>
       </ion-row>
 

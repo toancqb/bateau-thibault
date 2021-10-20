@@ -18,32 +18,32 @@ export class RestaurantsPage implements OnInit {
 
   public buttonsContent: ButtonsInterface[] = [
     {
-      "icon": "",
+      "icon": "desGascons_icon.png",
       "title": "Bistrot des Gascons",
       "path": "gascons"
     },
     {
-      "icon": "",
+      "icon": "fousDeLIle_icon.png",
       "title": "Les fous de l'ile",
       "path": "fous-de-l-ile"
     },
     {
-      "icon": "",
+      "icon": "bistrotLandais_icon.png",
       "title": "Bistrot Landais",
       "path": "landais"
     },
     {
-      "icon": "",
+      "icon": "villa9Trois_icon.png",
       "title": "Villa 9-Trois",
       "path": "neuf-trois"
     },
     {
-      "icon": "",
+      "icon": "duSommelier_icon.png",
       "title": "Bistrot du Sommelier",
       "path": "sommelier"
     },
     {
-      "icon": "",
+      "icon": "duSommelier_icon.png",
       "title": "Devenez partenaire!",
       "path": "partenaire"
     }
