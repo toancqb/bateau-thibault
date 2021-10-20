@@ -12,7 +12,7 @@ export class HomePage {
     {
       "icon": "poisson.png",
       "title": "Produits et promotions",
-      "path": "produits-et-promotions"
+      "path": "achat"
     },
     {
       "icon": "ancre.png",

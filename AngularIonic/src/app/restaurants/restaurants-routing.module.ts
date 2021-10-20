@@ -7,10 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: RestaurantsPage
-  },
-  {
-    path: 'gascons',
-    loadChildren: () => import('./gascons/gascons.module').then( m => m.GasconsPageModule)
   }
 ];
 

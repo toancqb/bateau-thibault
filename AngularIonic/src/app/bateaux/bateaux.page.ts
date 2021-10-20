@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { ButtonsInterface, TEXT_CONTENT } from '../interfaces';
+import { ButtonsInterface, TEXT_CONTENT, TEXT_CONTENT_CONTACT } from '../interfaces';
 
 @Component({
   selector: 'app-bateaux',
@@ -69,7 +69,7 @@ export class BateauxPage implements OnInit {
         "img": "TIG.png",
         "title": "Contact",
         "path": "contact",
-        "contents": TEXT_CONTENT
+        "contents": TEXT_CONTENT_CONTACT
       }
     },
     {
@@ -79,9 +79,7 @@ export class BateauxPage implements OnInit {
         "img": "TIG.png",
         "title": "Contact",
         "path": "contact",
-        "contents": ['06.63.99.99.78','lebateaudethibault@gmail.com','www.facebook.com/lebateaudethibault',
-                    'Qu il est chaud le soleil','Quand nous sommes en vacances','Y a d la joie des hirondelles','C est le sud de la France','Papa bricole au garage','Maman lit dans la chaise longue','Dans le joli paysage','Moi je me balade en longe',
-        'Que du bonheur!']
+        "contents": TEXT_CONTENT_CONTACT
       }
     },
   ];

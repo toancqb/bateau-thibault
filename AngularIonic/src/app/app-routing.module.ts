@@ -13,23 +13,7 @@ const routes: Routes = [
   {
     path: 'bateaux',
     loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
-  },
-  {
-    path: 'saphir',
-    loadChildren: () => import('./bateaux/saphir/saphir.module').then( m => m.SaphirPageModule)
-  },
-  {
-    path: 'de-la-brise',
-    loadChildren: () => import('./bateaux/brise/brise.module').then( m => m.BrisePageModule)
-  },
-  {
-    path: 'gast-micher',
-    loadChildren: () => import('./bateaux/gastmicher/gastmicher.module').then( m => m.GastmicherPageModule)
-  },
-  {
-    path: 'aquilon',
-    loadChildren: () => import('./bateaux/aquilon/aquilon.module').then( m => m.AquilonPageModule)
-  },
+  },  
   {
     path: 'restaurants',
     loadChildren: () => import('./restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
@@ -37,11 +21,7 @@ const routes: Routes = [
   {
     path: 'recettes',
     loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
-  },
-  {
-    path: 'homard',
-    loadChildren: () => import('./recettes/homard/homard.module').then( m => m.HomardPageModule)
-  },
+  },  
   {
     path: 'detail',
     loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
@@ -50,7 +30,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  }  
+  },   {
+    path: 'achat',
+    loadChildren: () => import('./achat/achat.module').then( m => m.AchatPageModule)
+  }
+ 
 ];
 
 @NgModule({
