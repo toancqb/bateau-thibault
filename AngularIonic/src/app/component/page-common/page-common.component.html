@@ -13,20 +13,10 @@
 
     <app-title [title]="title"></app-title>
 
-    <img [src]="img" />
+    <img class ="img-marging" [src]="img" />
 
-    <div *ngFor="let content of contents" class="contact-page-content">
-
+    <div *ngFor="let content of contents" class="text">
       <p>{{ content }}</p>
-    </div>
-    <div class="margin-top-25-percent poem-content">
-      <div *ngFor="let elem of poem">
-        <p>{{ elem }}</p>
-      </div>
-      <br>
-      <br>
-      <p>{{ happiness }}</p>
-      <p>{{ happiness }}</p>
     </div>
   </div>
 </div>

@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: RecettesPage
+  },  {
+    path: 'homard',
+    loadChildren: () => import('./homard/homard.module').then( m => m.HomardPageModule)
   }
+
 ];
 
 @NgModule({
