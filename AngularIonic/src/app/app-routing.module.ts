@@ -19,9 +19,29 @@ const routes: Routes = [
     loadChildren: () => import('./bateaux/saphir/saphir.module').then( m => m.SaphirPageModule)
   },
   {
+    path: 'de-la-brise',
+    loadChildren: () => import('./bateaux/brise/brise.module').then( m => m.BrisePageModule)
+  },
+  {
+    path: 'gast-micher',
+    loadChildren: () => import('./bateaux/gastmicher/gastmicher.module').then( m => m.GastmicherPageModule)
+  },
+  {
+    path: 'aquilon',
+    loadChildren: () => import('./bateaux/aquilon/aquilon.module').then( m => m.AquilonPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'restaurants',
+    loadChildren: () => import('./restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
+  },
+  {
+    path: 'recettes',
+    loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
   }
 ];
 
