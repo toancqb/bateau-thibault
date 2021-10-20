@@ -15,8 +15,18 @@
 
     <img [src]="img" />
 
-    <div>
-      <p>{{ contents[0] }}</p>
+    <div *ngFor="let content of contents" class="contact-page-content">
+
+      <p>{{ content }}</p>
+    </div>
+    <div class="margin-top-25-percent poem-content">
+      <div *ngFor="let elem of poem">
+        <p>{{ elem }}</p>
+      </div>
+      <br>
+      <br>
+      <p>{{ happiness }}</p>
+      <p>{{ happiness }}</p>
     </div>
   </div>
 </div>
