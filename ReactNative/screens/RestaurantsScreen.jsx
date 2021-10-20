@@ -2,7 +2,7 @@ import { Text, View, FlatList, StyleSheet } from "react-native"
 import React from 'react'
 import { Background, MainLayout } from "../components/templates"
 import bistrotDesGascons from '../assets/images/desGascons.png'
-import lesFousDeLile from '../assets/images/fousDeLile.png'
+import lesFousDeLile from '../assets/images/fousDeLIle.png'
 import bistrotLandais from '../assets/images/bistrotLandais.png'
 import villa9Trois from '../assets/images/villa9Trois.png'
 import duSommelier from '../assets/images/duSommelier.png'
