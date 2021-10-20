@@ -12,7 +12,7 @@ import { PageCommonComponent } from './page-common.component';
     FormsModule,
     IonicModule    
   ],
-  declarations: [TitleComponent],
+  declarations: [TitleComponent, TitleComponent],
   exports: [PageCommonComponent]
 })
 export class PageCommonModule {}

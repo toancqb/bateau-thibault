@@ -10,9 +10,7 @@
     <p id="page-component-title">
       {{ title }}   
     </p>
-
-    <app-title [title]="title"></app-title>
-
+    
     <img class ="img-marging" [src]="getImgUrl(img)" />
 
     <div *ngFor="let content of contents" class="text">

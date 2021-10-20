@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { ButtonsInterface } from '../interfaces';
+import { ButtonsInterface, TEXT_CONTENT } from '../interfaces';
 
 @Component({
   selector: 'app-bateaux',
@@ -29,7 +29,7 @@ export class BateauxPage implements OnInit {
         "img": "deLaBrise.png",
         "title": "De la Brise",
         "path": "de-la-brise",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -39,7 +39,7 @@ export class BateauxPage implements OnInit {
         "img": "saphir.png",
         "title": "Saphir",
         "path": "saphir",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -49,7 +49,7 @@ export class BateauxPage implements OnInit {
         "img": "gastMicher.png",
         "title": "Gast Micher",
         "path": "gast-micher",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -59,7 +59,7 @@ export class BateauxPage implements OnInit {
         "img": "aquilon.png",
         "title": "Aquilon",
         "path": "aquilon",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -69,7 +69,7 @@ export class BateauxPage implements OnInit {
         "img": "TIG.png",
         "title": "Contact",
         "path": "contact",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -79,7 +79,9 @@ export class BateauxPage implements OnInit {
         "img": "TIG.png",
         "title": "Contact",
         "path": "contact",
-        "contents": [""]
+        "contents": ['06.63.99.99.78','lebateaudethibault@gmail.com','www.facebook.com/lebateaudethibault',
+                    'Qu il est chaud le soleil','Quand nous sommes en vacances','Y a d la joie des hirondelles','C est le sud de la France','Papa bricole au garage','Maman lit dans la chaise longue','Dans le joli paysage','Moi je me balade en longe',
+        'Que du bonheur!']
       }
     },
   ];

@@ -29,8 +29,7 @@ export class DetailPage implements OnInit {
       }
     });
 
-    console.log(this.id, this.buttonContent);
-    this.title = this.id;
+    this.title = this.buttonContent.detail.title;
     this.imgUrl = this.buttonContent.detail.img;
     this.contents = this.buttonContent.detail.contents;  
   }

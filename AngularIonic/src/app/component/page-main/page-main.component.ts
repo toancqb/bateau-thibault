@@ -13,20 +13,14 @@ export class PageMainComponent {
   @Input() pageContent: string[];
   @Input() buttonsContent: ButtonsInterface[];
 
-  constructor(private router: Router) {}
-
-  onClickContact(name: string) {
-    this.router.navigate(['/' + name]);
-  }
+  constructor(private router: Router) {}  
 
   private getButtonContent(name: string): ButtonsInterface {
     for(let i = 0;i < this.buttonsContent.length; i++) {
       if (this.buttonsContent[i].name === name) {
-        console.log(this.buttonsContent[i]);
         return this.buttonsContent[i];
       }
     }
-    console.log("null");
     return null;
   }
 

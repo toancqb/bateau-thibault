@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ButtonsInterface } from '../interfaces';
+import { ButtonsInterface, TEXT_CONTENT } from '../interfaces';
 
 @Component({
   selector: 'app-restaurants',
@@ -25,7 +25,7 @@ export class RestaurantsPage implements OnInit {
         "img": "desGascons.png",
         "title": "Bistrot des Gascons",
         "path": "restaurants/gascons",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -35,7 +35,7 @@ export class RestaurantsPage implements OnInit {
         "img": "fousDeLIle.png",
         "title": "Les fous de l'ile",
         "path": "fous-de-l-ile",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -45,7 +45,7 @@ export class RestaurantsPage implements OnInit {
         "img": "bistrotLandais.png",
         "title": "Bistrot Landais",
         "path": "landais",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -55,7 +55,7 @@ export class RestaurantsPage implements OnInit {
         "img": "villa9Trois.png",
         "title": "Villa 9-Trois",
         "path": "neuf-trois",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -65,7 +65,7 @@ export class RestaurantsPage implements OnInit {
         "img": "duSommelier.png",
         "title": "Bistrot du Sommelier",
         "path": "sommelier",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     },
     {
@@ -75,7 +75,7 @@ export class RestaurantsPage implements OnInit {
         "img": "duSommelier.png",
         "title": "Devenez partenaire!",
         "path": "partenaire",
-        "contents": [""]
+        "contents": TEXT_CONTENT
       }
     }
   ];
