@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantsPage implements OnInit {
 
-  title: string = "Nos bateaux partenaires";
+  title: string = "Restaurants partenaires";
 
   pageContent: string[] = [
-    'Tous les eaux menent a Thibault',
+    'Tous les restaurants partenaires avec le bateau de Thibault',
     '06.63.99.99.78',
     'lebateaudethibault@gmail.com',
     'www.facebook.com/lebateaudethibault'
@@ -18,34 +18,34 @@ export class RestaurantsPage implements OnInit {
 
   public buttonsContent: ButtonsInterface[] = [
     {
-      "icon": "deLaBrise_icon.png",
-      "title": "De la Brise",
-      "path": "de-la-brise"
+      "icon": "",
+      "title": "Bistrot des Gascons",
+      "path": "gascons"
     },
     {
-      "icon": "saphir_icon.png",
-      "title": "Saphir",
-      "path": "saphir"
+      "icon": "",
+      "title": "Les fous de l'ile",
+      "path": "fous-de-l-ile"
     },
     {
-      "icon": "gastMicher_icon.png",
-      "title": "Gast Micher",
-      "path": "gast-micher"
+      "icon": "",
+      "title": "Bistrot Landais",
+      "path": "landais"
     },
     {
-      "icon": "aquilon_icon.png",
-      "title": "Aquilon",
-      "path": "aquilon"
+      "icon": "",
+      "title": "Villa 9-Trois",
+      "path": "neuf-trois"
     },
     {
-      "icon": "tourteau.png",
-      "title": "Contact",
-      "path": "contact"
+      "icon": "",
+      "title": "Bistrot du Sommelier",
+      "path": "sommelier"
     },
     {
-      "icon": "tourteau.png",
-      "title": "Contact",
-      "path": "contact"
+      "icon": "",
+      "title": "Devenez partenaire!",
+      "path": "partenaire"
     }
   ];
 
