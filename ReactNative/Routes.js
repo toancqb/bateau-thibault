@@ -11,17 +11,19 @@ import BarScreen from './screens/Recettes/BarScreen';
 import TourteauScreen from './screens/Recettes/TourteauScreen';
 import RecetteXYZScreen from './screens/Recettes/RecetteXYZ';
 import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen';
-import { StyleSheet } from 'react-native';
+import ProductsListScreen from './screens/ProductsListScreen';
+import CartScreen from './screens/CartScreen';
+
+import { Pressable, StyleSheet, Image, Text, View } from 'react-native';
 import React from 'react'
-import {Image, Text, View} from "react-native-web";
 import cartIcon from './assets/images/cartLogo.png'
 import homeIcon from './assets/images/homeLogo.png'
-import {ImageHeader} from "./components/molecules";
+import { ImageHeader } from "./components/molecules";
 
 const Stack = createStackNavigator();
 
-const headerSpecialOption = {
-    headerTitle: (props) => <ImageHeader {...props}/>,
+const headerSpecialOption = ({navigation}) => ({
+    headerTitle: (props) => <ImageHeader {...props} />,
     headerTintColor: '#fff',
     headerTitleAlign: 'center',
     headerStyle: {
@@ -30,12 +32,12 @@ const headerSpecialOption = {
         backgroundColor: 'rgb(0,0,0)',
     },
     headerRight: () => (
-        <View><Image style={styles.homeLogo} source={cartIcon}/></View>
+        <Pressable onPress={() => navigation.navigate('Cart')}><Image style={styles.homeLogo} source={cartIcon} /></Pressable>
     ),
     headerLeft: (props) => (
-        <Text {...props}><Image  style={styles.homeLogo} source={homeIcon}/></Text>
+        <Pressable {...props}  onPress={() => navigation.navigate('Home')}><Image style={styles.homeLogo} source={homeIcon}/></Pressable>
     ),
-}
+})
 
 const Routes = () => (
     <NavigationContainer>
@@ -52,6 +54,16 @@ const Routes = () => (
                 options={headerSpecialOption}
                 name="ProductsAndPromotions"
                 component={ProductsAndPromotionsScreen}
+            />
+            <Stack.Screen
+                options={headerSpecialOption}
+                name="ProductsList"
+                component={ProductsListScreen}
+            />
+            <Stack.Screen
+                options={headerSpecialOption}
+                name="Cart"
+                component={CartScreen}
             />
             <Stack.Screen
                 options={{
@@ -117,11 +129,11 @@ const Routes = () => (
                 name="Tourteau"
                 component={TourteauScreen}
             />
-             <Stack.Screen
-                 options={{
-                     title: '',
-                     headerTransparent: true,
-                 }}
+            <Stack.Screen
+                options={{
+                    title: '',
+                    headerTransparent: true,
+                }}
                 name="RecetteXYZ"
                 component={RecetteXYZScreen}
             />

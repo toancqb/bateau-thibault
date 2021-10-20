@@ -1,25 +1,35 @@
 import { Text, View, FlatList, StyleSheet } from "react-native"
 import React from 'react'
 import { Background } from "../components/templates"
-import { Button } from "../components/atoms"
+import { ListItem } from "../components/atoms"
 import PoupleIcon from '../assets/images/poulpe@3x.png'
-import { ProductCategories } from "../api"
+import { Products } from "../api"
 
-export default function ProductsAndPromotionsScreen({navigation}) {
+export default function ProductsListScreen({route, navigation}) {
+
+    const {productCategory} = route.params
+
+    const products = [...Products]
+
+    const filteredProductsByCategory = products.filter(product => {
+        if(productCategory === null){
+            return product.sale === true
+        }
+        return product.category === parseInt(productCategory)
+    })
+
+
     return (
         <Background>
             <Text style={styles.text}>Choissisez vos produits</Text>
             <View style={styles.container}>
                 <FlatList
-                    data={ProductCategories}
-                    renderItem={({ item }) => <View key={item.name} style={styles.listItem}>
-                        <Button onPress={() => navigation.navigate('ProductsList', {
-                            productCategory: item.category
-                        })} tinyLogoHeight={100} tinyLogoWidth={100} minHeight={128} iconSrc={PoupleIcon} title={item.name} /></View>}
+                    data={filteredProductsByCategory}
+                    renderItem={({ item }) => <View key={item.id} style={styles.listItem}>
+                        <ListItem iconSrc={PoupleIcon} item={item}/></View>}
                 />
             </View>
         </Background>
-
     )
 }
 
@@ -38,13 +48,8 @@ const styles = StyleSheet.create({
     item: {
         padding: 10,
         fontSize: 18,
-        height: 120,
         color: 'white'
     },
-    listItem: {
-        marginTop: 16,
-        marginBottom: 16,
-    }
 })
 
 

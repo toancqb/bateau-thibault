@@ -36,8 +36,4 @@ const styles = (props) => StyleSheet.create({
     height: props.tinyLogoHeight || 50,
     marginRight: '1rem'
   },
-  logo: {
-    width: 66,
-    height: 58,
-  },
 });

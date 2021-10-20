@@ -36,7 +36,7 @@ const SMALL_BUTTONS = [
     {
         icon: PoulpeIcon,
         title: 'Recette',
-        onPress: (props) => props.navigation.navigate('Recette2')
+        onPress: (props) => props.navigation.navigate('RecetteXYZ')
     }
 ]
 
@@ -85,7 +85,8 @@ const styles=StyleSheet.create({
         fontStyle: "italic",
         fontWeight: 'bold',
         flex: '1 1 0%',
-        marginBottom: '14%'
+        marginBottom: '15%',
+        marginTop: '15%'
     },
     smallText: {
         color: "black",

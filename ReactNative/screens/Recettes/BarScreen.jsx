@@ -34,7 +34,8 @@ const styles=StyleSheet.create({
         fontStyle: "italic",
         fontWeight: 'bold',
         flex: '1 1 0%',
-        marginBottom: '30%',
+        marginBottom: '15%',
+        marginTop: '15%'
     },
     imagePoisson: {
         width: '370px',
