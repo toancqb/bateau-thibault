@@ -1,26 +1,29 @@
 import React from 'react';
-import { Text, View, StyleSheet, Pressable, Image } from 'react-native';
+import { Text, StyleSheet, Pressable, Image } from 'react-native';
 
 export default function Button(props) {
   const { onPress, title = 'Save' } = props;
   return (
-    <Pressable style={styles.button} onPress={onPress}>
-      <Image style={styles.tinyLogo} source={props.iconSrc} />
-      <Text style={styles.text}>{title}</Text>
+    <Pressable style={styles(props).button} onPress={onPress}>
+      {props.iconSrc && (<Image style={styles(props).tinyLogo} source={props.iconSrc} />)}
+      <Text style={styles(props).text}>{title}</Text>
     </Pressable>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = (props) => StyleSheet.create({
   button: {
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
+    justifyContent: 'start',
+    paddingVertical: 8,
+    paddingHorizontal: 8,
     borderRadius: 4,
     elevation: 3,
     backgroundColor: 'rgba(0,0,0, 0.4)',
-    margin: '4px'
+    margin: 4,
+    minHeight: props.minHeight || 96,
+    display: 'flex',
+    flexDirection: 'row'
   },
   text: {
     fontSize: 16,
@@ -29,8 +32,9 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   tinyLogo: {
-    width: 50,
-    height: 50,
+    width: props.tinyLogoWidth || 50,
+    height: props.tinyLogoHeight || 50,
+    marginRight: '1rem'
   },
   logo: {
     width: 66,
