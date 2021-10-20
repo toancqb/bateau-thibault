@@ -2,16 +2,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen';
 import DetailScreen from './screens/DetailScreen';
-import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen';
-import BateauxScreen from './screens/BateauxScreen';
-import RestaurantsScreen from './screens/RestaurantsScreen';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import headerBg from './assets/images/navbarbg.png'
-import homeIcon from './assets/images/homeLogo.png'
-import cartIcon from './assets/images/cartLogo.png'
-import {Image} from 'react-native'
-import { ImageHeader } from './components/molecules';
+import RecetteScrean from './screens/RecetteScreen';
+import HomardScreen from './screens/Recettes/HomardScreen';
+import StJacquesScreen from './screens/Recettes/StJacquesScreen';
+import BarScreen from './screens/Recettes/BarScreen';
+import TourteauScreen from './screens/Recettes/TourteauScreen';
+import RecetteXYZScreen from './screens/Recettes/RecetteXYZ';
+import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen'
+import React from 'react'
 
 const Stack = createStackNavigator();
 
@@ -71,6 +69,30 @@ const Routes = () => (
                 }}
                 name="Restaurants"
                 component={RestaurantsScreen}
+            />
+            <Stack.Screen
+                name="Recette"
+                component={RecetteScrean}
+            />
+            <Stack.Screen
+                name="Homard"
+                component={HomardScreen}
+            />
+            <Stack.Screen
+                name="St Jacques"
+                component={StJacquesScreen}
+            />
+            <Stack.Screen
+                name="Bar"
+                component={BarScreen}
+            />
+            <Stack.Screen
+                name="Tourteau"
+                component={TourteauScreen}
+            />
+             <Stack.Screen
+                name="RecetteXYZ"
+                component={RecetteXYZScreen}
             />
         </Stack.Navigator>
     </NavigationContainer>
