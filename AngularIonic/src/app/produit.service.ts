@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
-import { ProduitInterface } from './interfaces';
+import { CartInterface, ProduitInterface, STORAGE_KEY } from './interfaces';
+import { Storage } from '@ionic/storage-angular';
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +18,35 @@ export class ProduitService {
   crustaces: ProduitInterface[];
   promotions: ProduitInterface[];
 
-  constructor(public http: HttpClient) {
+  private _storage: Storage | null = null;
+
+  constructor(public http: HttpClient, private storage: Storage) {
+    this.init();
+    
     this.cart = [];
     this.totalPrice$ = new Subject<number>();
     this.totalPrice = 0;
+  }
+
+  async init() {
+    this._storage = await this.storage.create();
+    if (this._storage.get(STORAGE_KEY) == null) {
+      let newCart: Map<number, number> = new Map();
+      this._storage.set(STORAGE_KEY, newCart);
+    }    
+  }
+
+  setStorage(key: string, value: any) {
+    this._storage?.set(key, value);
+  }
+
+  getStorage(key: string): any {
+    return this._storage.get(key);
+  }
+
+  clearStorage() {
+    let newCart: Map<number, number> = new Map();
+    this.setStorage(STORAGE_KEY, newCart);
   }
 
   getData(): Observable<Object> {
@@ -31,6 +57,6 @@ export class ProduitService {
     this.poissons = produits.filter(p => p.category === 0);
     this.coquillages = produits.filter(p => p.category === 1);
     this.crustaces = produits.filter(p => p.category === 2);
-    this.promotions = produits.filter(p => p.discount > 0);
+    this.promotions = produits.filter(p => p.sale);
   }
 }

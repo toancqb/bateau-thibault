@@ -1,16 +1,24 @@
 <ion-content padding>
   <app-header></app-header>
   <div class="produits-wrapper">
-    {{ name }}    
+    {{ choose }}    
   
     <ion-grid>
       <ion-row class="buttons" *ngFor="let item of produits">
         <ion-col size=12>
-            <div class="buttons-custom" >
-              <div class="buttons-content">
-                <img [src]="getUrl(iconUrl)" class="icons">
-                {{ item.name }}
-              </div>
+            <div class="buttons-custom" (click)="onClickProduit(item)">
+                <ion-row class="buttons-content">
+                  <ion-col size=2>
+                    <img [src]="getUrl(iconUrl)" class="icons">
+                  </ion-col>
+                  <ion-col size=6>
+                    {{ item.name }}
+                  </ion-col>
+                  
+                  <ion-col size=4 style="text-align: right;">
+                    <p id="{{ 'selected' + item.id }}" style="visibility: hidden;">OK</p>  {{ item.price }} €
+                  </ion-col>
+                </ion-row>
             </div>
         </ion-col>
       </ion-row>

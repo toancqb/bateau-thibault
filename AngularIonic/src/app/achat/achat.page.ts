@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
-import { AchatInterface } from '../interfaces';
+import { ChildrenOutletContexts, NavigationExtras, Router } from '@angular/router';
+import { AchatInterface, CHOOSE } from '../interfaces';
 import { ProduitService } from '../produit.service';
 
 @Component({
@@ -13,17 +13,14 @@ export class AchatPage implements OnInit {
   iconSrc: string = 'poulpe@3x.png';
   produits: any;
   buttonContents: AchatInterface[];
+  choose: string = CHOOSE;
 
   constructor(private produitService: ProduitService, private router: Router) { }
 
   ngOnInit() {
     this.produitService.getData().subscribe(res => {
       this.produits = res;
-      this.produitService.sortProduits(this.produits);
-      /*console.log("Poissons: ", this.produitService.poissons);
-      console.log("Coquillages: ", this.produitService.coquillages);
-      console.log("Crustaces: ", this.produitService.crustaces);
-      console.log("Promotions: ", this.produitService.promotions);*/
+      this.produitService.sortProduits(this.produits);      
 
       this.buttonContents = [
         {

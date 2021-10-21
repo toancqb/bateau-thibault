@@ -1,3 +1,6 @@
+
+export const STORAGE_KEY: string = '2021';
+
 export interface ButtonsInterface {
     name: string,
     detail: {
@@ -27,6 +30,11 @@ export interface AchatInterface {
   "detail": ProduitInterface[]
 }
 
+export interface CartInterface {
+  "item": ProduitInterface,
+  "quantity": number
+}
+
 export const TEXT_CONTENT = ['XXX YYY ZZZ',
 'Qu il est chaud le soleil',
 'Quand nous sommes en vacances',
@@ -42,3 +50,5 @@ export const TEXT_CONTENT = ['XXX YYY ZZZ',
 export const TEXT_CONTENT_CONTACT = ['06.63.99.99.78','lebateaudethibault@gmail.com','www.facebook.com/lebateaudethibault',
 'Qu il est chaud le soleil','Quand nous sommes en vacances','Y a d la joie des hirondelles','C est le sud de la France','Papa bricole au garage','Maman lit dans la chaise longue','Dans le joli paysage','Moi je me balade en longe',
 'Que du bonheur!'];
+
+export const CHOOSE = 'Choissiez vos produits';
