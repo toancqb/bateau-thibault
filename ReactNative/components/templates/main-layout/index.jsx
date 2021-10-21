@@ -25,7 +25,7 @@ const MainLayout = (props) => {
                         {
                             buttons.map(
                                 buttonData => (
-                                    <Button key={buttonData.title} title={buttonData.title} iconSrc={buttonData.icon} onPress={() => buttonData.onPress(navigationProps)}
+                                    <Button key={buttonData.id} title={buttonData.title} iconSrc={buttonData.icon} onPress={() => buttonData.onPress(navigationProps)}
                                     />
                                 )
                             )
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         flex: '1 1 0%',
         marginBottom: '15%',
-        marginTop: '30%'
+        marginTop: '15%'
     },
     textBold: {
         color: "black",

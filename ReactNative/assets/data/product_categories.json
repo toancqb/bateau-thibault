@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Poissons",
+        "icon": "poulpe",
+        "category": 0
+    },
+    {
+        "name": "Coquillages",
+        "icon": "poulpe",
+        "category": 1
+    },
+    {
+        "name": "Crustacés",
+        "icon": "poulpe",
+        "category": 2
+    },
+    {
+        "name": "Promotions",
+        "icon": "poulpe",
+        "category": null
+    }
+]

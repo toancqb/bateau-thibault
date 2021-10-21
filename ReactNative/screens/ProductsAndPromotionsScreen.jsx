@@ -2,22 +2,19 @@ import { Text, View, FlatList, StyleSheet } from "react-native"
 import React from 'react'
 import { Background } from "../components/templates"
 import { Button } from "../components/atoms"
-import PoupleIcon from '../assets/images/poulpe@3x.png'
+import { ProductCategories } from "../api"
 
-export default function ProductsAndPromotions() {
+export default function ProductsAndPromotionsScreen({navigation}) {
     return (
         <Background>
             <Text style={styles.text}>Choissisez vos produits</Text>
             <View style={styles.container}>
                 <FlatList
-                    data={[
-                        { key: 'Poissons' },
-                        { key: 'Coquillages' },
-                        { key: 'Crustacés' },
-                        { key: 'Promotions' },
-                    ]}
-                    renderItem={({ item }) => <View key={item.key} style={styles.listItem}>
-                        <Button tinyLogoHeight={100} tinyLogoWidth={100} minHeight={128} iconSrc={PoupleIcon} title={item.key} /></View>}
+                    data={ProductCategories}
+                    renderItem={({ item }) => <View key={item.name} style={styles.listItem}>
+                        <Button onPress={() => navigation.navigate('ProductsList', {
+                            productCategory: item.category
+                        })} tinyLogoHeight={100} tinyLogoWidth={100} minHeight={128} iconSrc={item.icon} title={item.name} /></View>}
                 />
             </View>
         </Background>

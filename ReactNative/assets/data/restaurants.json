@@ -1,0 +1,55 @@
+{
+    "title": "Restaurants partenaires",
+    "descriptions": ["Tous les restaurants partenaires avec le bateau Thibault"],
+    "items": [
+        {
+            "id": 1,
+            "name": "Bistrot des Gasçons",
+            "image": "desGascons",
+            "header": "Bistrot des Gasçons",
+            "subHeader": "XXX YYY ZZZ",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        },
+        {
+            "id": 2,
+            "name": "Les fous de l'île",
+            "image": "fousDeLIle",
+            "header": "Les fous de l'île",
+            "subHeader": "XXX YYY ZZZ",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        },
+        {
+            "id": 3,
+            "name": "Bistrot Landais",
+            "image": "bistrotLandais",
+            "header": "Bistrot Landais",
+            "subHeader": "XXX YYY ZZZ",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        },
+        {
+            "id": 4,
+            "name": "Ville 9-Trois",
+            "image": "villa9Trois",
+            "header": "Ville 9-Trois",
+            "subHeader": "XXX YYY ZZZ",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        },
+        {
+            "id": 5,
+            "name": "Bistrot le Sommelier",
+            "image": "duSommelier",
+            "header": "Bistrot le Sommelier",
+            "subHeader": "XXX YYY ZZZ",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        },
+        {
+            "id": 6,
+            "name": "Devenez partenaire!",
+            "image": "TIG",
+            "header": "Le Bateaux de Thibault",
+            "subHeader": "06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault\n",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n",
+            "notFull": true
+        }
+    ]
+}

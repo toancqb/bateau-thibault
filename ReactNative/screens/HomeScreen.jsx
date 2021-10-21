@@ -1,38 +1,34 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from '../components/atoms';
-import FishIcon from '../assets/images/poisson.png'
-import ShipIcon from '../assets/images/ancre.png'
-import RestaurantIcon from '../assets/images/restaurant.png'
-import RecipeIcon from '../assets/images/recette.png'
-import ContactIcon from '../assets/images/tourteau.png'
 import { Background } from '../components/templates';
 import tig from '../assets/images/TIG.png'
 
 
 const SMALL_BUTTONS = [
     {
-        icon: ShipIcon,
+        icon: 'ancre',
         title: 'Bateaux',
         onPress: (props) => props.navigation.navigate('Bateaux')
     },
     {
-        icon: RestaurantIcon,
+        icon: 'restaurant',
         title: 'Restaurants',
         onPress: (props) => props.navigation.navigate('Restaurants')
     },
     {
-        icon: RecipeIcon,
+        icon: 'recette',
         title: 'Recette',
         onPress: (props) => props.navigation.navigate('Recette')
     },
     {
-        icon: ContactIcon,
+        icon: 'tourteau',
         title: 'Contact',
         onPress: (props) => props.navigation.navigate('Detail', {
-            img: tig,
+            img: 'TIG',
             header: 'Le Bateaux de Thibault',
-            subHeader: '06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault\n'
+            subHeader: '06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault\n',
+            content: "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
         })
     }
 ]
@@ -48,7 +44,7 @@ export default function HomeScreen(props) {
             <Text style={styles.smallText}>www.facebook.com/lebateaudethibault</Text>
             <View style={{ marginTop: '15%', width: "100%" }}>
                 <View style={{ width: '100%' }}>
-                    <Button title="Produits et promotions" iconSrc={FishIcon} onPress={() => props.navigation.navigate('ProductsAndPromotions')} />
+                    <Button title="Produits et promotions" iconSrc={'poisson'} onPress={() => props.navigation.navigate('ProductsAndPromotions')} />
                 </View>
 
                 <View style={{
@@ -86,7 +82,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         flex: '1 1 0%',
         marginBottom: '15%',
-        marginTop: '30%'
+        marginTop: '15%'
     },
     textBold: {
         color: "black",

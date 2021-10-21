@@ -1,0 +1,22 @@
+[
+    {
+        "label": "Bistrots des Gasçons",
+        "value": "desGascon",
+        "address": "26 Av. de Tourville, 75007 Paris"
+    },
+    {
+        "label": "Café les Phares",
+        "value": "lesPhares",
+        "address": "7 Pl. de la Bastille, 75004 Paris"
+    },
+    {
+        "label": "Le Vert Tulipe",
+        "value": "vertTulipe",
+        "address": "2 Rue de Londres, 75009 Paris"
+    },
+    {
+        "label": "Ruche qui dit Oui",
+        "value": "rucheQuiDitOui",
+        "address": "2 rue de la Roquette 75011 Paris"
+    }
+]

@@ -1,13 +1,14 @@
 import React from 'react';
-import { Text, StyleSheet, Pressable, Image } from 'react-native';
+import { Text, StyleSheet, Pressable, Image, TouchableOpacity } from 'react-native';
+import {iconPathHelper} from '../../../utils/pathUtils'
 
 export default function Button(props) {
   const { onPress, title = 'Save' } = props;
   return (
-    <Pressable style={styles(props).button} onPress={onPress}>
-      {props.iconSrc && (<Image style={styles(props).tinyLogo} source={props.iconSrc} />)}
+    <TouchableOpacity style={styles(props).button} onPress={onPress}>
+      {props.iconSrc && (<Image style={styles(props).tinyLogo} source={iconPathHelper(props.iconSrc)} />)}
       <Text style={styles(props).text}>{title}</Text>
-    </Pressable>
+    </TouchableOpacity>
   );
 }
 
@@ -35,9 +36,5 @@ const styles = (props) => StyleSheet.create({
     width: props.tinyLogoWidth || 50,
     height: props.tinyLogoHeight || 50,
     marginRight: '1rem'
-  },
-  logo: {
-    width: 66,
-    height: 58,
   },
 });
