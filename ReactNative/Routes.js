@@ -5,11 +5,6 @@ import BateauxScreen from './screens/BateauxScreen';
 import RestaurantsScreen from './screens/RestaurantsScreen';
 import DetailScreen from './screens/DetailScreen';
 import RecetteScrean from './screens/RecetteScreen';
-import HomardScreen from './screens/Recettes/HomardScreen';
-import StJacquesScreen from './screens/Recettes/StJacquesScreen';
-import BarScreen from './screens/Recettes/BarScreen';
-import TourteauScreen from './screens/Recettes/TourteauScreen';
-import RecetteXYZScreen from './screens/Recettes/RecetteXYZ';
 import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen';
 import ProductsListScreen from './screens/ProductsListScreen';
 import CartScreen from './screens/CartScreen';
@@ -96,46 +91,6 @@ const Routes = () => (
                 }}
                 name="Recette"
                 component={RecetteScrean}
-            />
-            <Stack.Screen
-                options={{
-                    title: '',
-                    headerTransparent: true,
-                }}
-                name="Homard"
-                component={HomardScreen}
-            />
-            <Stack.Screen
-                options={{
-                    title: '',
-                    headerTransparent: true,
-                }}
-                name="St Jacques"
-                component={StJacquesScreen}
-            />
-            <Stack.Screen
-                options={{
-                    title: '',
-                    headerTransparent: true,
-                }}
-                name="Bar"
-                component={BarScreen}
-            />
-            <Stack.Screen
-                options={{
-                    title: '',
-                    headerTransparent: true,
-                }}
-                name="Tourteau"
-                component={TourteauScreen}
-            />
-            <Stack.Screen
-                options={{
-                    title: '',
-                    headerTransparent: true,
-                }}
-                name="RecetteXYZ"
-                component={RecetteXYZScreen}
             />
         </Stack.Navigator>
     </NavigationContainer>

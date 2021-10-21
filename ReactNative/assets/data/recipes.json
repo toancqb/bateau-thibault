@@ -1,0 +1,60 @@
+{
+    "title": "Nos Recettes",
+    "descriptions": ["Toutes les recettes du bateau de Thibault."],
+    "items": [
+        {
+            "id": 1,
+            "name": "Homard",
+            "image": "homardRecette",
+            "icon": "homardRecette_icon",
+            "header": "Homard",
+            "subHeader": "Homard en chaud-froid",
+            "content": "Faites cuire les homards dans l'eau bouillante avec du thym, du laurier, du sel et du poivre de Cayenne. Laissez cuire 20 minutes. Egouttez-les et laissez-les refroidir.\n\nDécoupez les coffres des homards dans le sens de la longueur.\n\nMélangez la mayonnaise avec le cognac, le corail et la ciboulette ciseléee"
+        },
+        {
+            "id": 2,
+            "name": "St Jacques",
+            "image": "saintJacques",
+            "icon": "saintJacques_icon",
+            "header": "St Jacques",
+            "subHeader": "Noix de Saint-Jacques flambées au cognac",
+            "content": "Faire fondre du beurre avec des échalottes puis ajouter les noix de Saint-Jacques. Les faire revenir en laissant le milieu translucide puis les retirer du feu.\n\nAjouter l'ail et le persil dans la poêle et laisser cuire quelques secondes. Bien faire chauffer la poêle, puis flamber au Cognac. Une fois éteinte, ajouter les noix de Saint-Jacques (Il ne faut pas les flamber car elles perderaient leur saveur).\n\nDéguster chaud nature ou accompagné d'une fondue de poireaux."
+        },
+        {
+            "id": 3,
+            "name": "Bar",
+            "image": "gastMicher",
+            "icon": "barRecette_icon",
+            "header": "Bar",
+            "subHeader": "Bar rôti au laurier frais",
+            "content": "Sur une plaque ou un plat allant au four, disposer quelques feuilles de laurier frais, verser un filet d'huile d'olive et du gros sel. Disposer le bar, puis l'arroser d'un filet d'huile d'olive et mettre un peu de gros sel sur la peau.\n\nCuire au four pendant 12 min à 240°C."
+        },
+        {
+            "id": 4,
+            "name": "Tourteau",
+            "image": "poulpe",
+            "icon": "poulpe",
+            "header": "Tourteau",
+            "subHeader": "Tourteau Linguine",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        },
+        {
+            "id": 5,
+            "name": "Recette",
+            "image": "poulpe",
+            "icon": "poulpe",
+            "header": "Recette",
+            "subHeader": "XXX YYY ZZZ",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        },
+        {
+            "id": 6,
+            "name": "Recette",
+            "image": "poulpe",
+            "icon": "poulpe",
+            "header": "Recette",
+            "subHeader": "XXX YYY ZZZ",
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+        }
+    ]
+}

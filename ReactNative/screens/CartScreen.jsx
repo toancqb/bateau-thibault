@@ -2,7 +2,7 @@ import { Text, View, FlatList, StyleSheet, } from "react-native"
 import React, { useContext, useEffect } from 'react'
 import { Background } from "../components/templates"
 import { Button, CartItem, } from "../components/atoms"
-import PoupleIcon from '../assets/images/poulpe@3x.png'
+import PoupleIcon from '../assets/icons/poulpe@3x.png'
 import { CartContext } from '../context/cart';
 import { useState } from "react/cjs/react.development"
 
@@ -14,7 +14,12 @@ export default function CartScreen() {
     const calculateTotal = () => {
         let total = 0
         products.forEach(p => {
-            total += p.price * p.quantity
+            if(p.sale){
+                total += (p.price - p.discount) * p.quantity
+            }
+            else{
+                total += p.price * p.quantity
+            }
         });
         return total
     }
@@ -89,7 +94,9 @@ const styles = StyleSheet.create({
         paddingRight: 8,
         paddingTop: 8,
         paddingBottom: 8,
-        fontSize: 18
+        fontSize: 18,
+        zIndex: 1,
+        elevation: 1
     }
 })
 

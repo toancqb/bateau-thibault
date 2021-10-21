@@ -1,9 +1,9 @@
 export const imagePathHelper = (imagePath) => {
-    return `../assets/images/${imagePath}`
+    return require(`../assets/images/${imagePath}.png`)
 }
 
 export const iconPathHelper = (iconPath) => {
-    return `../assets/icons/${iconPath}`
+    return require(`../assets/icons/${iconPath}.png`)
 }
 
 export const dataPathHelper = (dataPath) => {

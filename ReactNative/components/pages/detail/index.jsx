@@ -1,11 +1,11 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, Text, View, Image, Br} from 'react-native';
 import background from '../../../assets/images/background.png';
-import tig from '../../../assets/images/TIG.png'
+import { imagePathHelper } from '../../../utils/pathUtils';
 
-export default function DetailPage({route, navigation}) {
+export default function DetailPage({route}) {
     
-    const { img = tig, header = 'Le Bateaux de Thibault', subHeader, fullWidth = false } = route.params;
+    const { img , header, subHeader, fullWidth, content } = route.params;
 
     const styleProps = {
         fullWidth
@@ -16,21 +16,11 @@ export default function DetailPage({route, navigation}) {
             <ImageBackground source={background} resizeMode="cover" style={styles(styleProps).image}>
                 <Text style={styles(styleProps).header}>{header}</Text>
                 <View style={styles(styleProps).elemContact}>
-                    <Image source={img} style={styles(styleProps).imageTIG}/>
+                    <Image source={imagePathHelper(img)} style={styles(styleProps).imageTIG}/>
                     <Text style={styles(styleProps).smallText}>{subHeader}</Text>
                 </View>
                 <View>
-                    <Text style={styles(styleProps).smallText}>Qu'il est chaud le soleil</Text>
-                    <Text style={styles(styleProps).smallText}>Quand nous sommes en vacances</Text>
-                    <Text style={styles(styleProps).smallText}>Y a d'la joie, des hirondelles</Text>
-                    <Text style={styles(styleProps).smallText}>C'est le sud de la France</Text>
-                    <Text style={styles(styleProps).smallText}>Papa bricole au garage</Text>
-                    <Text style={styles(styleProps).smallText}>Maman lit dans la chaise longue</Text>
-                    <Text style={styles(styleProps).smallText}>Dans ce joli paysage</Text>
-                    <Text style={styles(styleProps).smallText}>Moi, je me balade en tongs</Text>
-                    <Text>{"\n"}</Text>
-                    <Text style={styles(styleProps).smallText}>Que du Bonheur!</Text>
-                    <Text style={styles(styleProps).smallText}>Que du Bonheur!</Text>
+                    <Text style={styles(styleProps).smallText}>{content}</Text>
                 </View>
             </ImageBackground>
         </View>
@@ -55,7 +45,7 @@ const styles= ({fullWidth = false}) => StyleSheet.create({
         marginBottom: '14%'
     },
     imageTIG: {
-        width: fullWidth ? '100vw' : '200px',
+        width: fullWidth ? '100vw' : '250px',
         height: '250px',
         marginLeft: 'auto',
         marginRight: 'auto',

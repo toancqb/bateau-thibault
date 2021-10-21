@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         elevation: 3,
         backgroundColor: 'rgba(0,0,0, 0.4)',
-        minHeight: 32,
+        minHeight: 48,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between'
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     text: {
-        fontSize: 16,
+        fontSize: 14,
         lineHeight: 21,
         letterSpacing: 0.25,
         marginRight: 8,

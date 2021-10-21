@@ -2,7 +2,6 @@ import { Text, View, FlatList, StyleSheet } from "react-native"
 import React from 'react'
 import { Background } from "../components/templates"
 import { Button } from "../components/atoms"
-import PoupleIcon from '../assets/images/poulpe@3x.png'
 import { ProductCategories } from "../api"
 
 export default function ProductsAndPromotionsScreen({navigation}) {
@@ -15,7 +14,7 @@ export default function ProductsAndPromotionsScreen({navigation}) {
                     renderItem={({ item }) => <View key={item.name} style={styles.listItem}>
                         <Button onPress={() => navigation.navigate('ProductsList', {
                             productCategory: item.category
-                        })} tinyLogoHeight={100} tinyLogoWidth={100} minHeight={128} iconSrc={PoupleIcon} title={item.name} /></View>}
+                        })} tinyLogoHeight={100} tinyLogoWidth={100} minHeight={128} iconSrc={item.icon} title={item.name} /></View>}
                 />
             </View>
         </Background>

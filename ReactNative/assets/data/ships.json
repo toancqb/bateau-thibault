@@ -1,55 +1,60 @@
 {
-    "title": "Restaurants partenaires",
-    "descriptions": ["Tous les restaurants partenaires avec le bateau Thibault"],
+    "title": "Les bateaux partenaires",
+    "descriptions": ["Tous les eaux mènent le bateau Thibault"],
     "items": [
         {
             "id": 1,
-            "name": "Bistrot des Gasçons",
-            "image": "desGascons",
-            "header": "Bistrot des Gasçons",
+            "name": "De la brise",
+            "icon": "deLaBrise_icon",
+            "image": "deLaBrise",
+            "header": "De la brise",
             "subHeader": "XXX YYY ZZZ",
             "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
         },
         {
             "id": 2,
-            "name": "Les fous de l'île",
-            "image": "fousDeLIle",
-            "header": "Les fous de l'île",
+            "name": "Saphir",
+            "icon": "saphir_icon",
+            "image": "saphir",
+            "header": "Saphir",
             "subHeader": "XXX YYY ZZZ",
             "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
         },
         {
             "id": 3,
-            "name": "Bistrot Landais",
-            "image": "bistrotLandais",
-            "header": "Bistrot Landais",
+            "name": "Gast Micher",
+            "icon": "gastMicher_icon",
+            "image": "gastMicher",
+            "header": "Gast Micher",
             "subHeader": "XXX YYY ZZZ",
             "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
         },
         {
             "id": 4,
-            "name": "Ville 9-Trois",
-            "image": "villa9Trois",
-            "header": "Ville 9-Trois",
+            "name": "Aquilon",
+            "icon": "aquilon_icon",
+            "image": "aquilon",
+            "header": "Aquilon",
             "subHeader": "XXX YYY ZZZ",
             "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
         },
         {
             "id": 5,
-            "name": "Bistrot le Sommelier",
-            "image": "duSommelier",
-            "header": "Bistrot le Sommelier",
-            "subHeader": "XXX YYY ZZZ",
+            "name": "Contact",
+            "icon": "ancre",
+            "image": "TIG",
+            "header": "Le Bateaux de Thibault",
+            "subHeader": "06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault\n",
             "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
         },
         {
             "id": 6,
-            "name": "Devenez partenaire!",
+            "name": "Contact",
+            "icon": "ancre",
             "image": "TIG",
             "header": "Le Bateaux de Thibault",
             "subHeader": "06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault\n",
-            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n",
-            "notFull": true
+            "content": "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
         }
     ]
 }

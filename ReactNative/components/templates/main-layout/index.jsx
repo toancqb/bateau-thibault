@@ -25,7 +25,7 @@ const MainLayout = (props) => {
                         {
                             buttons.map(
                                 buttonData => (
-                                    <Button key={buttonData.title} title={buttonData.title} iconSrc={buttonData.icon} onPress={() => buttonData.onPress(navigationProps)}
+                                    <Button key={buttonData.id} title={buttonData.title} iconSrc={buttonData.icon} onPress={() => buttonData.onPress(navigationProps)}
                                     />
                                 )
                             )
