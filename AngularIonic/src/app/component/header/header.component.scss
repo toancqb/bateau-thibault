@@ -1,0 +1,16 @@
+$HEIGHT: 30px;
+
+#banner {
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+
+.header-wrapper {
+    --background: black;
+}
+
+.icons {
+    height: $HEIGHT;
+    width: $HEIGHT;
+}
