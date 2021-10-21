@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AchatInterface, ProduitInterface } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-produits',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProduitsPage implements OnInit {
 
-  constructor() { }
+  name: string;
+  produits: ProduitInterface[];
+  iconUrl = 'poulpe.png';
+
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.name = this.router.getCurrentNavigation().extras.state.name;
+        this.produits = this.router.getCurrentNavigation().extras.state.detail;
+      }
+    });
+
+    console.log(this.produits);
   }
+
+  getUrl(name: string) {
+    return '../../assets/icon/' + name;
+  }   
 
 }

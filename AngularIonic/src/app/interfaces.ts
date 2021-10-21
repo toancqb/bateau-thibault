@@ -7,7 +7,25 @@ export interface ButtonsInterface {
       path: string,
       contents: string[]
     }
-  }
+}
+
+export interface ProduitInterface {
+  "owner": string,
+  "price": number,
+  "id": number,
+  "unit": string,
+  "discount": number,
+  "availability": boolean,
+  "name": string,
+  "comments": string,
+  "category": number,
+  "sale": boolean
+}
+
+export interface AchatInterface {
+  "name": string,
+  "detail": ProduitInterface[]
+}
 
 export const TEXT_CONTENT = ['XXX YYY ZZZ',
 'Qu il est chaud le soleil',

@@ -2,11 +2,11 @@
     <app-header></app-header>
     <div class="achat-wrapper">
         <ion-grid>
-            <ion-row id="achat-title">
-                <p>Choissiez vos produits</p>
+            <ion-row size=12 id="achat-title">
+                Choissiez vos produits
             </ion-row>
 
-            <ion-row class="buttons">
+            <ion-row class="buttons" (click)="onLoadProduits(buttonContents[0].name)">
                 <ion-col size=12>          
                     <div class="buttons-custom" >
                       <div class="buttons-content">
@@ -16,7 +16,7 @@
                     </div> 
                 </ion-col>
             </ion-row>
-            <ion-row class="buttons">
+            <ion-row class="buttons" (click)="onLoadProduits(buttonContents[1].name)">
                 <ion-col size=12>          
                     <div class="buttons-custom" >
                       <div class="buttons-content">
@@ -26,7 +26,7 @@
                     </div> 
                 </ion-col>
             </ion-row>
-            <ion-row class="buttons">
+            <ion-row class="buttons" (click)="onLoadProduits(buttonContents[2].name)">
                 <ion-col size=12>          
                     <div class="buttons-custom" >
                       <div class="buttons-content">
@@ -36,7 +36,7 @@
                     </div> 
                 </ion-col>
             </ion-row>
-            <ion-row class="buttons">
+            <ion-row class="buttons" (click)="onLoadProduits(buttonContents[3].name)">
                 <ion-col size=12>          
                     <div class="buttons-custom" >
                       <div class="buttons-content">
