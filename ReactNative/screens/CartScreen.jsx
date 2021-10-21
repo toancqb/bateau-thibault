@@ -15,7 +15,7 @@ export default function CartScreen() {
     const [total, setTotal] = useState(0)
 
     const [relayPointPickerOpen, setRelayPointPickerOpen] = useState(false);
-    const [value, setValue] = useState(null);
+    const [pointsRelaisValue, setPointRelaisValue] = useState(null);
 
     const [items, setItems] = useState(pointsRelais);
 
@@ -50,10 +50,6 @@ export default function CartScreen() {
         });
         return total
     }, products)
-
-    useEffect(() => {
-        console.log(value)
-    }, [value])
 
     const createTwoButtonAlert = () =>
         Alert.alert(
@@ -91,10 +87,10 @@ export default function CartScreen() {
                     <DropDownPicker
                         style={styles.dropdown}
                         open={relayPointPickerOpen}
-                        value={value}
+                        value={pointsRelaisValue}
                         items={items}
                         setOpen={setRelayPointPickerOpen}
-                        setValue={setValue}
+                        setValue={setPointRelaisValue}
                         setItems={setItems}
                         style={{
                             display: 'flex',
@@ -110,11 +106,11 @@ export default function CartScreen() {
                             borderRadius: 8
                         }}
                         textStyle={{
-                            color: 'black'
+                            color: 'black',
                         }}
                     />
                     {"\n"}
-                    {value ? pointsRelais.find(p => p.value === value).address : 'Veuillez vous choiser votre point de relais!'}
+                    {pointsRelaisValue ? pointsRelais.find(p => p.value === pointsRelaisValue).address : 'Veuillez vous choiser votre point de relais!'}
                     {"\n"}
                     Date de livraison:
                     <DateTimePickerModal

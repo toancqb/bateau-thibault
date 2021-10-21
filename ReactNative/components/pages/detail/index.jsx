@@ -41,8 +41,8 @@ const styles= ({fullWidth = false}) => StyleSheet.create({
         textAlign: "center",
         fontStyle: "italic",
         fontWeight: 'bold',
-        flex: '1 1 0%',
-        marginBottom: '14%'
+        flex: 1,
+        marginTop: '15%'
     },
     imageTIG: {
         width: fullWidth ? '100vw' : '250px',
@@ -55,8 +55,9 @@ const styles= ({fullWidth = false}) => StyleSheet.create({
         fontSize: 14,
         textAlign: "center",
         fontStyle: "italic",
+        marginBottom: 64
     },
     elemContact: {
-        marginBottom: '10%',
+        flex: 2
     },
 })

@@ -37,11 +37,15 @@ export default function HomeScreen(props) {
     return (
         <Background>
             <Text style={styles.header}>Le Bateaux de Thibault</Text>
-            <Text style={styles.textBold}>Vent en direct de notre bateau</Text>
-            <Text style={styles.textBold}>Produits selon la saison, Livraisons sur Paris</Text>
-            <Text style={styles.smallText}>06.63.99.99.78</Text>
-            <Text style={styles.smallText}>lebateaudethibault@gmail.com</Text>
-            <Text style={styles.smallText}>www.facebook.com/lebateaudethibault</Text>
+            <View style={{
+                flex: 1,
+            }}>
+                <Text style={styles.textBold}>Vent en direct de notre bateau</Text>
+                <Text style={styles.textBold}>Produits selon la saison, Livraisons sur Paris</Text>
+                <Text style={styles.smallText}>06.63.99.99.78</Text>
+                <Text style={styles.smallText}>lebateaudethibault@gmail.com</Text>
+                <Text style={styles.smallText}>www.facebook.com/lebateaudethibault</Text>
+            </View>
             <View style={{ marginTop: '15%', width: "100%" }}>
                 <View style={{ width: '100%' }}>
                     <Button title="Produits et promotions" iconSrc={'poisson'} onPress={() => props.navigation.navigate('ProductsAndPromotions')} />
@@ -80,7 +84,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontStyle: "italic",
         fontWeight: 'bold',
-        flex: '1 1 0%',
+        flex: 1,
         marginBottom: '15%',
         marginTop: '15%'
     },
@@ -89,7 +93,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: "center",
         fontStyle: "italic",
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     smallText: {
         color: "black",
