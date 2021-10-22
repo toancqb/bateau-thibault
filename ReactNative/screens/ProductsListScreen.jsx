@@ -2,7 +2,7 @@ import { Text, View, FlatList, StyleSheet } from "react-native"
 import React from 'react'
 import { Background } from "../components/templates"
 import { ListItem } from "../components/atoms"
-import PoupleIcon from '../assets/icons/poulpe@3x.png'
+import PoupleIcon from '../assets/icons/poulpe.png'
 import { Products } from "../api"
 
 export default function ProductsListScreen({route, navigation}) {

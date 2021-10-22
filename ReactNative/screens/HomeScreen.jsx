@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { contact } from '../api';
 import { Button } from '../components/atoms';
 import { Background } from '../components/templates';
-import tig from '../assets/images/TIG.png'
-
 
 const SMALL_BUTTONS = [
     {
@@ -25,10 +24,10 @@ const SMALL_BUTTONS = [
         icon: 'tourteau',
         title: 'Contact',
         onPress: (props) => props.navigation.navigate('Detail', {
-            img: 'TIG',
-            header: 'Le Bateaux de Thibault',
-            subHeader: '06.63.99.99.78\nlebateaudethibault@gmail.com\nwww.facebook.com/lebateaudethibault\n',
-            content: "Qu'il est chaud le soleil\nQuand nous sommes en vacances\nY a d'la joie, des hirondelles\nC'est le sud de la France\nPapa bricole au garage\nMaman lit dans la chaise longue\nDans ce joli paysage\nMoi, je me balade en tongs\n\nQue du Bonheur!\nQue du Bonheur!\n"
+            img: contact.img,
+            header: contact.header,
+            subHeader: contact.subHeader,
+            content: contact.content
         })
     }
 ]

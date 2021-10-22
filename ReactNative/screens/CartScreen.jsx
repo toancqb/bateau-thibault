@@ -2,7 +2,7 @@ import { Text, View, FlatList, StyleSheet, Alert } from "react-native"
 import React, { useCallback, useContext, useEffect } from 'react'
 import { Background } from "../components/templates"
 import { Button, CartItem, } from "../components/atoms"
-import PoupleIcon from '../assets/icons/poulpe@3x.png'
+import PoupleIcon from '../assets/icons/poulpe.png'
 import { CartContext } from '../context/cart';
 import { useState } from "react/cjs/react.development"
 import DropDownPicker from 'react-native-dropdown-picker';

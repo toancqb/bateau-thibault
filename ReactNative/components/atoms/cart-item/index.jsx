@@ -56,7 +56,6 @@ export default function CartItem(props) {
 const styles = StyleSheet.create({
     button: {
         alignItems: 'center',
-        justifyContent: 'start',
         paddingVertical: 8,
         paddingHorizontal: 8,
         elevation: 3,
