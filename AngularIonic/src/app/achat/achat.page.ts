@@ -17,8 +17,8 @@ export class AchatPage implements OnInit {
 
   constructor(private produitService: ProduitService, private router: Router) { }
 
-  ngOnInit() {
-    this.produitService.getData().subscribe(res => {
+  async ngOnInit() {
+    await this.produitService.getData().subscribe(res => {
       this.produits = res;
       this.produitService.sortProduits(this.produits);      
 
@@ -45,6 +45,10 @@ export class AchatPage implements OnInit {
     (err) => {
       alert('failed loading json data');
     });
+
+    /*console.log(this.produits);
+    this.produitService.produits = this.produits;
+    console.log(this.produitService.produits);*/
   }
 
   getContent(name: string): AchatInterface {

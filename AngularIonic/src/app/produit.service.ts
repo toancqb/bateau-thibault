@@ -17,6 +17,7 @@ export class ProduitService {
   coquillages: ProduitInterface[];
   crustaces: ProduitInterface[];
   promotions: ProduitInterface[];
+  produits: ProduitInterface[];
 
   private _storage: Storage | null = null;
 
@@ -54,9 +55,15 @@ export class ProduitService {
   }
 
   sortProduits(produits: ProduitInterface[]) {
+    this.produits = produits;
     this.poissons = produits.filter(p => p.category === 0);
     this.coquillages = produits.filter(p => p.category === 1);
     this.crustaces = produits.filter(p => p.category === 2);
     this.promotions = produits.filter(p => p.sale);
+  }
+
+  getProduit(id: number): ProduitInterface[] {
+    let lst = this.produits.filter(p => p.id == id);
+    return (lst == null)? [null] : lst; 
   }
 }
