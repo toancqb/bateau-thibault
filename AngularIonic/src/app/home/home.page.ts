@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeButtonsInterface } from '../interfaces';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
 
-  public buttonsContent: ButtonsInterface[] = [
+  public buttonsContent: HomeButtonsInterface[] = [
     {
       "icon": "poisson.png",
       "title": "Produits et promotions",
@@ -42,14 +44,13 @@ export class HomePage {
     this.router.navigate(['/' + name]);
   }
 
+  onLoadMainPage() {
+    
+  }
+
   getUrl(name: string): string {
     return '../../assets/icon/' + name; 
   }
 
 }
 
-interface ButtonsInterface {
-  icon: string,
-  title: string,
-  path: string
-}

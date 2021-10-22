@@ -10,27 +10,30 @@ import { ProduitService } from 'src/app/produit.service';
 export class CartPage implements OnInit {
 
   modify: string = 'Modifiez la quantite en tappant sur chaque produit';
-  carts: CartInterface[] = [];
   iconSrc: string = 'poulpe.png';
+  priceTotal: number;
 
   constructor(private produitService: ProduitService) { }
 
   ngOnInit() {
-    this.mapData();
+    if (!this.produitService.isLoaded) {
+      this.mapData(); 
+      this.produitService.isLoaded = true;
+    }       
+    this.getPriceTotal();
   }
 
   async mapData() {
     await this.produitService.getStorage(STORAGE_KEY).then(value => {      
       value.forEach((v,k) => {
-        this.carts.push({
+        this.produitService.carts.push({
           "item": this.produitService.getProduit(k)[0],
           "quantity": v
         });
       });
     });
 
-    this.carts = this.carts.filter(c => c.item != null);
-    console.log(this.carts);
+    this.produitService.carts = this.produitService.carts.filter(c => c.item != null);    
   } 
 
   getUrl(name: string) {
@@ -39,10 +42,19 @@ export class CartPage implements OnInit {
 
   onClickAdd(item: CartInterface) {
     item.quantity += 1;
+    this.priceTotal += item.item.price;
   }
 
   onClickSub(item: CartInterface) {
     item.quantity -= 1;
+    this.priceTotal -= item.item.price;
+  }
+
+  getPriceTotal() {
+    this.priceTotal = 0;
+    this.produitService.carts.forEach(v => {
+      this.priceTotal += v.quantity * v.item.price;
+    });     
   }
 
 }

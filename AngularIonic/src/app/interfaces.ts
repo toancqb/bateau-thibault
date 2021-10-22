@@ -1,6 +1,12 @@
 
 export const STORAGE_KEY: string = '2021';
 
+export interface HomeButtonsInterface {
+  icon: string,
+  title: string,
+  path: string
+};
+
 export interface ButtonsInterface {
     name: string,
     detail: {
@@ -10,7 +16,7 @@ export interface ButtonsInterface {
       path: string,
       contents: string[]
     }
-}
+};
 
 export interface ProduitInterface {
   "owner": string,
@@ -23,17 +29,17 @@ export interface ProduitInterface {
   "comments": string,
   "category": number,
   "sale": boolean
-}
+};
 
 export interface AchatInterface {
   "name": string,
   "detail": ProduitInterface[]
-}
+};
 
 export interface CartInterface {
   "item": ProduitInterface,
   "quantity": number
-}
+};
 
 export const TEXT_CONTENT = ['XXX YYY ZZZ',
 'Qu il est chaud le soleil',

@@ -9,9 +9,10 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class ProduitService {
 
-  cart: string[];
+  carts: CartInterface[];
   totalPrice$: Subject<number>;
   totalPrice: number;
+  isLoaded: boolean = false;
 
   poissons: ProduitInterface[];
   coquillages: ProduitInterface[];
@@ -24,7 +25,7 @@ export class ProduitService {
   constructor(public http: HttpClient, private storage: Storage) {
     this.init();
     
-    this.cart = [];
+    this.carts = [];
     this.totalPrice$ = new Subject<number>();
     this.totalPrice = 0;
   }
@@ -66,4 +67,6 @@ export class ProduitService {
     let lst = this.produits.filter(p => p.id == id);
     return (lst == null)? [null] : lst; 
   }
+
+  
 }
