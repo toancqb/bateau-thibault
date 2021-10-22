@@ -61,7 +61,7 @@ export default function CartScreen() {
                     onPress: () => console.log("Cancel Pressed"),
                     style: "cancel"
                 },
-                { text: "Oui", onPress: () => console.log("OK Pressed") }
+                { text: "Oui", onPress: () => alert("Commande envoyé") }
             ]
         );
 

@@ -9,7 +9,7 @@ import ProductsAndPromotionsScreen from './screens/ProductsAndPromotionsScreen';
 import ProductsListScreen from './screens/ProductsListScreen';
 import CartScreen from './screens/CartScreen';
 
-import { Pressable, StyleSheet, Image, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Image, } from 'react-native';
 import React from 'react'
 import cartIcon from './assets/images/cartLogo.png'
 import homeIcon from './assets/images/homeLogo.png'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, Pressable, Image, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import {iconPathHelper} from '../../../utils/pathUtils'
 
 export default function Button(props) {

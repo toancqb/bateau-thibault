@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View, Image, Br} from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native';
 import background from '../../../assets/images/background.png';
 import { imagePathHelper } from '../../../utils/pathUtils';
 

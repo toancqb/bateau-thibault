@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Text, StyleSheet, Pressable, Image, View, FlatList, TouchableOpacity, TextInput } from 'react-native';
+import { Text, StyleSheet, Image, View, TouchableOpacity, TextInput } from 'react-native';
 import { CartContext } from '../../../context/cart';
 
 export default function CartItem(props) {

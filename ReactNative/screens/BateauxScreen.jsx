@@ -1,6 +1,5 @@
 import React from 'react'
 import { Background, MainLayout } from "../components/templates"
-import tig from '../assets/images/TIG.png'
 import { Bateaux } from '../api'
 
 const constructButtons = (items) => {

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Text, StyleSheet, Pressable, Image, View } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, Image, View } from 'react-native';
 import { CartContext } from '../../../context/cart';
 
 export default function ListItem(props) {
@@ -14,16 +14,16 @@ export default function ListItem(props) {
     }
 
     return (
-        <Pressable style={styles.button} onPress={onPress}>
+        <TouchableOpacity style={styles.button} onPress={onPress}>
             <View style={styles.leftPart}>
                 {props.iconSrc && (<Image style={styles.tinyLogo} source={props.iconSrc} />)}
                 <Text style={styles.text}>{item.name}</Text>
             </View>
             <View style={styles.rightPart}>
-                <Text style={styles.text}>{clicked ? 'OK' : ''}</Text>
+                <Text style={styles.text}>{clicked > 0 ? 'OK' : ''}</Text>
                 <Text style={styles.text}>{item.price} €</Text>
             </View>
-        </Pressable>
+        </TouchableOpacity>
     );
 }
 
