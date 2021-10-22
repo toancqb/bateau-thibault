@@ -26,7 +26,7 @@ export class ProduitsPage implements OnInit {
       }
     });    
     
-    this.setVisibilitySelected();
+    this.setVisibilitySelected();    
   }
 
   private setVisibilitySelected() {

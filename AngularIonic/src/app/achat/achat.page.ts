@@ -39,8 +39,7 @@ export class AchatPage implements OnInit {
           "name": "promotions",
           "detail": this.produitService.promotions
         }
-      ]
-
+      ]      
     },
     (err) => {
       alert('failed loading json data');
@@ -49,6 +48,7 @@ export class AchatPage implements OnInit {
     /*console.log(this.produits);
     this.produitService.produits = this.produits;
     console.log(this.produitService.produits);*/
+    this.produitService.getPriceTotal();
   }
 
   getContent(name: string): AchatInterface {

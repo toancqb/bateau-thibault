@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartInterface, ProduitInterface, STORAGE_KEY } from 'src/app/interfaces';
+import { CartInterface, STORAGE_KEY } from 'src/app/interfaces';
 import { ProduitService } from 'src/app/produit.service';
 
 @Component({
@@ -17,24 +17,11 @@ export class CartPage implements OnInit {
 
   ngOnInit() {
     if (!this.produitService.isLoaded) {
-      this.mapData(); 
+      this.produitService.mapData(); 
       this.produitService.isLoaded = true;
     }       
-    this.getPriceTotal();
-  }
-
-  async mapData() {
-    await this.produitService.getStorage(STORAGE_KEY).then(value => {      
-      value.forEach((v,k) => {
-        this.produitService.carts.push({
-          "item": this.produitService.getProduit(k)[0],
-          "quantity": v
-        });
-      });
-    });
-
-    this.produitService.carts = this.produitService.carts.filter(c => c.item != null);    
-  } 
+    this.priceTotal = this.produitService.totalPrice;
+  }  
 
   getUrl(name: string) {
     return '../../assets/icon/' + name;
@@ -56,5 +43,4 @@ export class CartPage implements OnInit {
       this.priceTotal += v.quantity * v.item.price;
     });     
   }
-
 }

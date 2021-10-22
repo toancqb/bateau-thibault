@@ -28,6 +28,7 @@ export class ProduitService {
     this.carts = [];
     this.totalPrice$ = new Subject<number>();
     this.totalPrice = 0;
+    this.mapData();
   }
 
   async init() {
@@ -68,5 +69,24 @@ export class ProduitService {
     return (lst == null)? [null] : lst; 
   }
 
-  
+  getPriceTotal(): number {
+    this.totalPrice = 0;
+    this.carts.forEach(v => {
+      this.totalPrice += v.quantity * v.item.price;
+    });
+    return this.totalPrice;  
+  }
+
+  async mapData() {
+    await this.getStorage(STORAGE_KEY).then(value => {      
+      value.forEach((v,k) => {
+        this.carts.push({
+          "item": this.getProduit(k)[0],
+          "quantity": v
+        });
+      });
+    });
+
+    this.carts = this.carts.filter(c => c.item != null);    
+  } 
 }
