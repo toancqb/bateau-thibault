@@ -49,7 +49,7 @@ export default function CartScreen() {
             }
         });
         return total
-    }, products)
+    }, [products])
 
     const createTwoButtonAlert = () =>
         Alert.alert(

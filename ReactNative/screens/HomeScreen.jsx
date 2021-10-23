@@ -41,9 +41,7 @@ export default function HomeScreen(props) {
             }}>
                 <Text style={styles.textBold}>Vent en direct de notre bateau</Text>
                 <Text style={styles.textBold}>Produits selon la saison, Livraisons sur Paris</Text>
-                <Text style={styles.smallText}>06.63.99.99.78</Text>
-                <Text style={styles.smallText}>lebateaudethibault@gmail.com</Text>
-                <Text style={styles.smallText}>www.facebook.com/lebateaudethibault</Text>
+                <Text style={styles.smallText}>{contact.subHeader}</Text>
             </View>
             <View style={{ marginTop: '15%', width: "100%" }}>
                 <View style={{ width: '100%' }}>

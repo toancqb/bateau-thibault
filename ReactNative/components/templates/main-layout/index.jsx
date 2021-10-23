@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native';
 import { Button } from '../../atoms';
+import { contact } from '../../../api';
 
 const MainLayout = (props) => {
     const { header, descriptions, buttons, navigationProps } = props
@@ -16,9 +17,7 @@ const MainLayout = (props) => {
                         <Text key={description} style={styles.textBold}>{description}</Text>
                     ))
                 }
-                <Text style={styles.smallText}>06.63.99.99.78</Text>
-                <Text style={styles.smallText}>lebateaudethibault@gmail.com</Text>
-                <Text style={styles.smallText}>www.facebook.com/lebateaudethibault</Text>
+                <Text style={styles.smallText}>{contact.subHeader}</Text>
             </View>
             <View style={{ marginTop: '15%', width: "100%" }}>
                 <View style={{
