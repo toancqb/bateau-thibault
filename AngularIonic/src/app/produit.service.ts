@@ -44,7 +44,7 @@ export class ProduitService {
   }
 
   getStorage(key: string): any {
-    return this._storage.get(key);
+    return this._storage?.get(key);
   }
 
   clearStorage() {
@@ -78,7 +78,7 @@ export class ProduitService {
   }
 
   async mapData() {
-    await this.getStorage(STORAGE_KEY).then(value => {      
+    await this.getStorage(STORAGE_KEY)?.then(value => {      
       value.forEach((v,k) => {
         this.carts.push({
           "item": this.getProduit(k)[0],
